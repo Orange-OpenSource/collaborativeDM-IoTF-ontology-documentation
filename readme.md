@@ -16,4 +16,5 @@ Copyright (c) 2023 Orange
 
 
 ## Maintainer
- * e-mail: amal.guittoum@orange.com
+ 
+ * Amal GUITTOUM e-mail: amal.guittoum@orange.com
