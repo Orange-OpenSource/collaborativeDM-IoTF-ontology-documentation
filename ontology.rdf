@@ -1,0 +1,3038 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/orangeinnovation/IoTF#"
+     xml:base="http://www.semanticweb.org/orangeinnovation/IoTF"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:IoTF="http://www.semanticweb.org/orangeinnovation/IoTF#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:NetworkI="http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF">
+        <owl:imports rdf:resource="https://saref.etsi.org/core/"/>
+        <terms:description>IoT-F reprensents failures of IoT systems.</terms:description>
+        <terms:title>IoT Failure ontology</terms:title>
+        <vann:preferredNamespaceUri>http://www.semanticweb.org/orangeinnovation/IoTF</vann:preferredNamespaceUri>
+        <owl:versionIRI>http://www.semanticweb.org/orangeinnovation/IoTF/0.0.1</owl:versionIRI>
+        <owl:versionInfo>0.0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/example"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage"/>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage"/>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionIRI -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionIRI"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#becauseOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#becauseOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#effectIs -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#effectIs">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#happensAt -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#happensAt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#hasDeviceType -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#hasDeviceType">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#producesEffect -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#producesEffect">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureEffect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/accomplishes -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/accomplishes">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/core/isAccomplishedBy"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment xml:lang="en">A relationship between a certain entity (e.g., a device) and the task it accomplishes</rdfs:comment>
+        <rdfs:label xml:lang="en">accomplishes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/actsUpon -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/actsUpon">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Command"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/State"/>
+        <rdfs:comment xml:lang="en">A relationship between a command and a state</rdfs:comment>
+        <rdfs:label xml:lang="en">acts upon</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/consistsOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/consistsOf">
+        <rdfs:comment xml:lang="en">A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)</rdfs:comment>
+        <rdfs:label xml:lang="en">consists of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/controlsProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/controlsProperty">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment xml:lang="en">A relationship specifying the property that can be controlled by a certain device</rdfs:comment>
+        <rdfs:label xml:lang="en">controls property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasCommand -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasCommand">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/core/isCommandOf"/>
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Function"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Command"/>
+        <rdfs:comment xml:lang="en">A relationship between a function and a command</rdfs:comment>
+        <rdfs:label xml:lang="en">has command</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasFunction -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasFunction">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Function"/>
+        <rdfs:comment xml:lang="en">A relationship identifying the function of a device</rdfs:comment>
+        <rdfs:label xml:lang="en">has function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasMeasurement -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasMeasurement">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:comment xml:lang="en">A relationship between a feature of interest and a measurement about it</rdfs:comment>
+        <rdfs:label xml:lang="en">has measurement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasMeterReading -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasMeterReading">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/MeteringFunction"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:comment xml:lang="en">A relationship between a metering function and the measurement of the reading</rdfs:comment>
+        <rdfs:label xml:lang="en">has meter reading</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasMeterReadingType -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasMeterReadingType">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/MeteringFunction"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment xml:lang="en">A relationship identifying the reading type of a metering function (e.g., Water, Gas, Pressure , Energy , Power, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="en">has meter reading type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasPrice -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasPrice">
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Price"/>
+        <rdfs:comment xml:lang="en">A relationship indentifying the price associated to an entity</rdfs:comment>
+        <rdfs:label xml:lang="en">has price</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasProfile -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasProfile">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Profile"/>
+        <rdfs:comment xml:lang="en">A relationship associating a profile to a certain device</rdfs:comment>
+        <rdfs:label xml:lang="en">has profile</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasProperty">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/core/isPropertyOf"/>
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment xml:lang="en">A relationship between a feature of interest and a property of that feature</rdfs:comment>
+        <rdfs:label xml:lang="en">has property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasSensingRange -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasSensingRange">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/SensingFunction"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:comment xml:lang="en">A relationship between a sensing function and a measurement identifying the range of a sensor detection</rdfs:comment>
+        <rdfs:label xml:lang="en">has sensing range</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasSensorType -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasSensorType">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/SensingFunction"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment xml:lang="en">A relationship identifying the sensing type of a sensor detection (i.e., Temperature, Occupancy, Humidity, Motion , Smoke, Pressure, etc.) </rdfs:comment>
+        <rdfs:label xml:lang="en">has sensor type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasState -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasState">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/State"/>
+        <rdfs:comment xml:lang="en">A relationship identifying the type of state of a device</rdfs:comment>
+        <rdfs:label xml:lang="en">has state</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasThresholdMeasurement -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasThresholdMeasurement">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/EventFunction"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:comment xml:lang="en">A relationship associated with an event function to notify that a certain threshold measurement has been exceeded</rdfs:comment>
+        <rdfs:label xml:lang="en">has threshold measurement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasTime -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasTime">
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Time"/>
+        <rdfs:comment xml:lang="en">A relationship to associate time information to an entity</rdfs:comment>
+        <rdfs:label xml:lang="en">has time</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasTypicalConsumption -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasTypicalConsumption">
+        <rdfs:comment xml:lang="en">A relationship identifying the typical (energy or power) consumption of a device</rdfs:comment>
+        <rdfs:label xml:lang="en">has typical consumption</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isAbout -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isAbout">
+        <rdfs:comment xml:lang="en">A relationship identifying what an entity, such as a profile, is about</rdfs:comment>
+        <rdfs:label xml:lang="en">isAbout</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isAccomplishedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isAccomplishedBy">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment xml:lang="en">A relationship identifying an entity (e.g., a device) that can accomplish a task.</rdfs:comment>
+        <rdfs:label xml:lang="en">is accomplished by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isCommandOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isCommandOf">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Command"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Function"/>
+        <rdfs:comment xml:lang="en">A relationship between a command and a function.</rdfs:comment>
+        <rdfs:label xml:lang="en">is command of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isControlledByDevice -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isControlledByDevice">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:comment xml:lang="en">A relationship specifying the devices that can control a certain property</rdfs:comment>
+        <rdfs:label xml:lang="en">is controlled by device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isMeasuredByDevice -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasuredByDevice">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:comment xml:lang="en">A relationship specifying the devices that can measure a certain property</rdfs:comment>
+        <rdfs:label xml:lang="en">is measured by device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isMeasuredIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasuredIn">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+        <rdfs:comment xml:lang="en">A relationship identifying the unit of measure used for a certain entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">is measured in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isMeasurementOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasurementOf">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/core/hasMeasurement"/>
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+        <rdfs:comment xml:lang="en">A relationship between a measurement and the feature of interest whose quality was measured</rdfs:comment>
+        <rdfs:label xml:lang="en">isMeasurementOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isOfferedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isOfferedBy">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/core/offers"/>
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Service"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:comment xml:lang="en">A relationship between a service and a device that offers the service</rdfs:comment>
+        <rdfs:label xml:lang="en">is offered by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isPropertyOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isPropertyOf">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+        <rdfs:comment xml:lang="en">A relationship between a property and the feature of interest it belongs to</rdfs:comment>
+        <rdfs:label xml:lang="en">is property of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isUsedFor -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isUsedFor">
+        <rdfs:comment xml:lang="en">A relationship specifying the commodity for which a device is used for</rdfs:comment>
+        <rdfs:label xml:lang="en">is used for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/makesMeasurement -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/makesMeasurement">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/core/measurementMadeBy"/>
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:comment xml:lang="en">A relation between a device and the measurements it makes. Such measurement will link together the value of the measurement, its unit of measure and the property to which it relates.</rdfs:comment>
+        <rdfs:label xml:lang="en">makes measurement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/measurementMadeBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/measurementMadeBy">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:comment xml:lang="en">A relation between a measurement and the device that made it.</rdfs:comment>
+        <rdfs:label xml:lang="en">measurement made by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/measuresProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/measuresProperty">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment xml:lang="en">A relationship specifying the property that can be measured by a certain device</rdfs:comment>
+        <rdfs:label xml:lang="en">measures property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/offers -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/offers">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Service"/>
+        <rdfs:comment xml:lang="en">A relationship between a device and a service</rdfs:comment>
+        <rdfs:label xml:lang="en">offers</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/relatesToMeasurement -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/relatesToMeasurement">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:comment xml:lang="en">A relationship between a property and the measurements it relates to</rdfs:comment>
+        <rdfs:label xml:lang="en">relates to measurement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/relatesToProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/relatesToProperty">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/core/relatesToMeasurement"/>
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment xml:lang="en">A relationship between a measurement and the property it relates to</rdfs:comment>
+        <rdfs:label xml:lang="en">relates to property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/represents -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/represents">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Service"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Function"/>
+        <rdfs:comment xml:lang="en">A relationship between a service and a function.</rdfs:comment>
+        <rdfs:label xml:lang="en">represents</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasDescription">
+        <rdfs:comment xml:lang="en">A relationship providing a description of an entity (e.g., device). The value is expected to be a string or a string with language tag.</rdfs:comment>
+        <rdfs:comment xml:lang="en">DEPRECATED: The use of rdfs:comment is recommended instead.</rdfs:comment>
+        <rdfs:label xml:lang="en">has description</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasManufacturer -->
+
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasManufacturer">
+        <rdfs:comment xml:lang="en">A relationship identifying the manufacturer of an entity (e.g., device). The value is expected to be a string or a string with language tag.</rdfs:comment>
+        <rdfs:label xml:lang="en">has manufacturer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasModel -->
+
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasModel">
+        <rdfs:comment xml:lang="en">A relationship identifying the model of an entity (e.g., device). The value is expected to be a string or a string with language tag.</rdfs:comment>
+        <rdfs:label xml:lang="en">has model</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasTimestamp -->
+
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasTimestamp">
+        <rdfs:comment xml:lang="en">A relationship stating the timestamp of an entity (e.g. a measurement).</rdfs:comment>
+        <rdfs:label xml:lang="en">has timestamp</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasValue">
+        <rdfs:comment xml:lang="en">A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes.</rdfs:comment>
+        <rdfs:label xml:lang="en">has value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#AudioOutputFault -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#AudioOutputFault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#BLEFault -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#BLEFault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#BatteryFluctuation -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#BatteryFluctuation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#Calibration -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#Calibration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop"/>
+        <rdfs:comment>happens when sensor data may have offset or have a different gain from the ground truth values.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#CellularFault -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#CellularFault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause"/>
+        <rdfs:comment>represents failure cause related to the connectivity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType">
+        <rdfs:comment>denotes a type of a market IoT device e.g., FIBARO light bulb.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#Environnment -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#Environnment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause"/>
+        <rdfs:comment>represents failure cause related to the environment.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#EthernetFault -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#EthernetFault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FailStop -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FailStop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <rdfs:comment>happens when a device stops functioning and is un-responsive to external requests.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause">
+        <rdfs:comment>denotes the cause of a failure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FailureEffect -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FailureEffect">
+        <rdfs:comment>represents the effects of a failure mode.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">
+        <rdfs:comment>a form of a dysfunction related to an IoTdevice.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareVersion -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareVersion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause"/>
+        <rdfs:comment>represents failure cause related to the hardware.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HardwareVersion -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareVersion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop"/>
+        <rdfs:comment>A high variance failure appears when a device’s state fluctuates back and forth more rapidly than the environment dictates.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#LowBattery -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#LowBattery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#NFCFault -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#NFCFault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <rdfs:comment>failure relate to a response by the device that diverges from the desired device state.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#NonVolatileMemoryError -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#NonVolatileMemoryError">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#Omission -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#Omission">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#Outlier -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#Outlier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop"/>
+        <rdfs:comment>an outlier failure occurs when a device to report an incorrect state for a very brief period, usually theduration of just 1 poll.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause"/>
+        <rdfs:comment>reprensents failure cause related to power e.g, battery level.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#PowerSource -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#PowerSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#RebootCount -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#RebootCount">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction">
+        <rdfs:comment>denotes actions that allows recovering a device from a given failure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause"/>
+        <rdfs:comment>represents failure cause related to software.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareVersion -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareVersion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#Spike -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#Spike">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop"/>
+        <rdfs:comment>A spike fault happens when there is a rapid increase or decrease in the device state.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop"/>
+        <rdfs:comment>A stuck-at failure happens when a device cannot change state, maintaining the same state despite changes in environment or actuation commands.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#Symptom -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom">
+        <owl:equivalentClass rdf:resource="https://saref.etsi.org/core/Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#Temperature -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#Temperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#ThreadFault -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#ThreadFault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#Timing -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#Timing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#TotalOperationalTime -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#TotalOperationalTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#UpTime -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#UpTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#UserInterfaceFault -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#UserInterfaceFault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#VisualDisplayFault -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#VisualDisplayFault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#WIFIFault -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#WIFIFault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/ActuatingFunction -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/ActuatingFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Function"/>
+        <rdfs:comment xml:lang="en">A function that allows to transmit data to actuators, such as level settings (e.g., temperature) or binary switching (e.g., open/close, on/off)</rdfs:comment>
+        <rdfs:label xml:lang="en">Actuating function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Actuator -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Actuator">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/ActuatingFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A device responsible for moving or controlling a mechanism or system by performing an actuating function</rdfs:comment>
+        <rdfs:label xml:lang="en">Actuator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Appliance -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Appliance">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:comment xml:lang="en">An electrical/mechanical machine that accomplish some household functions, such as cleaning or cooking</rdfs:comment>
+        <rdfs:label xml:lang="en">Appliance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/CloseCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/CloseCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/actsUpon"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/OpenCloseState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/OpenCloseFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://saref.etsi.org/core/OpenCommand"/>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Close command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/CloseState -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/CloseState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/OpenCloseState"/>
+        <rdfs:comment xml:lang="en">The state of a device that is CLOSE</rdfs:comment>
+        <rdfs:label xml:lang="en">Close state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Coal -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Coal">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Commodity"/>
+        <rdfs:comment xml:lang="en">A type of commodity</rdfs:comment>
+        <rdfs:label xml:lang="en">Coal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Command -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Command">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/actsUpon"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isCommandOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/core/Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A directive that a device must support to perform a certain function. A command may act upon a state, but does not necessarily act upon a state. For example, the ON command acts upon the ON/OFF state, but the GET command does not act upon any state, it simply gives a directive to retrieve a certain value. We propose here a list of commands that are relevant for the purpose of SAREF, but this list can be extended.</rdfs:comment>
+        <rdfs:label xml:lang="en">Command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Commodity -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Commodity">
+        <rdfs:comment xml:lang="en">A marketable item for which there is demand, but which is supplied without qualitative differentiation across a market. SAREF refers to energy commodities such as electricity, gas, coal and oil. </rdfs:comment>
+        <rdfs:label xml:lang="en">Commodity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Currency -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Currency">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+        <rdfs:comment xml:lang="en">The class of units of measure for price</rdfs:comment>
+        <rdfs:label xml:lang="en">Currency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Device -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Device">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/consistsOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/controlsProperty"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasProfile"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Profile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasState"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isUsedFor"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Commodity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/makesMeasurement"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/measuresProperty"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/offers"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Service"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/accomplishes"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/core/Task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasFunction"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/core/Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasManufacturer"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasModel"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A tangible object designed to accomplish a particular task. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function.</rdfs:comment>
+        <rdfs:label xml:lang="en">Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/DoorSwitch -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/DoorSwitch">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Switch"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/OpenCloseFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasState"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/OpenCloseState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A switch that performs the saref:OpenCloseFunction, is used for controlling a door, and can be found in the state saref:OpenCloseState. A saref:DoorSwitch is typically used to accomplish saref:Safety.</rdfs:comment>
+        <rdfs:label xml:lang="en">Door switch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Electricity -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Electricity">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Commodity"/>
+        <rdfs:comment xml:lang="en">A type of commodity</rdfs:comment>
+        <rdfs:label xml:lang="en">Electricity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Energy -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Energy">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment xml:lang="en">A saref:Property related to some measurements that are characterized by a certain value measured in an energy unit (such as Kilowatt_Hour or Watt_hour). Furter specializations of the saref:Energy class can be found in the SAREF4ENER extension, where classes such as EnergyMax, EnergyMin and EnergyExpected are defined. </rdfs:comment>
+        <rdfs:label xml:lang="en">Energy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/EnergyUnit -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/EnergyUnit">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+        <rdfs:comment xml:lang="en">The unit of measure for energy</rdfs:comment>
+        <rdfs:label xml:lang="en">Energy unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/EventFunction -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/EventFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasThresholdMeasurement"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/core/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A function that allows to notify about some relevant activity; e.g., that a certain threshold value has been exceeded or that some object has moved.</rdfs:comment>
+        <rdfs:label xml:lang="en">Event function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/FeatureOfInterest -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/FeatureOfInterest">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasMeasurement"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasProperty"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A feature of interest represents any real world entity from which a property is measured.</rdfs:comment>
+        <rdfs:label xml:lang="en">Feature of interest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Function -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Function">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasCommand"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/core/Command"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The functionality necessary to accomplish the task for which a device is designed. A device can be designed to perform more than one function. Functions can be structured in categories (subclasses) that reflect different points of view, for example, considering the specific application area for which a function can be used (e.g., light, temperature, motion, heat, power, etc.), or the capability that a function can support (e.g., receive, reply, notify, etc.), and so forth. </rdfs:comment>
+        <rdfs:label xml:lang="en">Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Gas -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Gas">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Commodity"/>
+        <rdfs:comment xml:lang="en">A type of commodity</rdfs:comment>
+        <rdfs:label xml:lang="en">Gas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/GetCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/GetCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Command"/>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Get command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/GetCurrentMeterValueCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/GetCurrentMeterValueCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/GetCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/MeteringFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of get command</rdfs:comment>
+        <rdfs:label xml:lang="en">Get current meter value command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/GetMeterDataCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/GetMeterDataCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/GetCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/MeteringFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of get command</rdfs:comment>
+        <rdfs:label xml:lang="en">Get meter data command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/GetMeterHistoryCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/GetMeterHistoryCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/GetCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/MeteringFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of get command</rdfs:comment>
+        <rdfs:label xml:lang="en">Get meter history command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/GetSensingDataCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/GetSensingDataCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/GetCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/SensingFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of get command</rdfs:comment>
+        <rdfs:label xml:lang="en">Get sensing data command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/HVAC -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/HVAC">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:comment xml:lang="en">Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. A saref:HVAC is typically used to accomplish saref:Comfort.</rdfs:comment>
+        <rdfs:label xml:lang="en">HVAC</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Humidity -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Humidity">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment xml:lang="en">A saref:Property related to some measurements that are characterized by a certain value that is measured in a humidity unit</rdfs:comment>
+        <rdfs:label xml:lang="en">Humidity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/IlluminanceUnit -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/IlluminanceUnit">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+        <rdfs:comment xml:lang="en">The unit of measure for light</rdfs:comment>
+        <rdfs:label xml:lang="en">Illuminance unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/LevelControlFunction -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/LevelControlFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/ActuatingFunction"/>
+        <rdfs:comment xml:lang="en">An actuating function that allows to do level adjustments of a property in a certain range (e.g., 0%-100%), such as dimming a light in a room or setting the speed of an electric motor. </rdfs:comment>
+        <rdfs:label xml:lang="en">Level control function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Light -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Light">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment xml:lang="en">A saref:Property related to some measurements that are characterized by a certain value that is measured in a illuminance unit (lux)</rdfs:comment>
+        <rdfs:label xml:lang="en">Light</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/LightSwitch -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/LightSwitch">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Switch"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/controlsProperty"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/Light"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasState"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/OnOffState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/offers"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/SwitchOnService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A switch that performs the saref:OnOffFunction, controls the property saref:Light, and can be found in the state saref:OnOffState. It can offer a switch on service. A saref:LightSwitch is typically used to accomplish saref:Lighting.</rdfs:comment>
+        <rdfs:label xml:lang="en">Light switch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Measurement -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Measurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isMeasuredIn"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isMeasurementOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/relatesToProperty"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isMeasuredIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/relatesToProperty"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasTimestamp"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasValue"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement.</rdfs:comment>
+        <rdfs:label xml:lang="en">Measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Meter -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Meter">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/MeteringFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A device built to accurately detect and display a quantity in a form readable by a human being. Further, a device of category saref:Meter that performs a saref:MeteringFunction.</rdfs:comment>
+        <rdfs:label xml:lang="en">Meter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/MeteringFunction -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/MeteringFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasMeterReading"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasMeterReadingType"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://saref.etsi.org/core/Commodity"/>
+                            <rdf:Description rdf:about="https://saref.etsi.org/core/Property"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A function that allows to get data from a meter, such as current meter reading or instantaneous demand</rdfs:comment>
+        <rdfs:label xml:lang="en">Metering function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Motion -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Motion">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment xml:lang="en">A saref:Property related to some measurements that are characterized by a certain value that is measured in a unit of measure for motion</rdfs:comment>
+        <rdfs:label xml:lang="en">Motion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/MultiLevelState -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/MultiLevelState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/State"/>
+        <rdfs:comment xml:lang="en">A type of state</rdfs:comment>
+        <rdfs:label xml:lang="en">Multi level state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/NotifyCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/NotifyCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/EventFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Notify command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Occupancy -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Occupancy">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment xml:lang="en">A saref:Property related to some measurements that are characterized by a certain value (saref:hasValue property) that is measured in a unit of measure for occupancy</rdfs:comment>
+        <rdfs:label xml:lang="en">Occupancy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/OffCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/OffCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/actsUpon"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/OnOffState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://saref.etsi.org/core/OnCommand"/>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Off command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/OffState -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/OffState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/OnOffState"/>
+        <rdfs:comment xml:lang="en">The state of a device that is Off</rdfs:comment>
+        <rdfs:label xml:lang="en">Off state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/OnCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/OnCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/actsUpon"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/OnOffState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">On command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/OnOffFunction -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/OnOffFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/ActuatingFunction"/>
+        <rdfs:comment xml:lang="en">An actuating function that allows to switch on and off an actuator</rdfs:comment>
+        <rdfs:label xml:lang="en">On off function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/OnOffState -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/OnOffState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/State"/>
+        <rdfs:comment xml:lang="en">A type of state</rdfs:comment>
+        <rdfs:label xml:lang="en">On off state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/OnState -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/OnState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/OnOffState"/>
+        <rdfs:comment xml:lang="en">The state of a device that is On</rdfs:comment>
+        <rdfs:label xml:lang="en">On state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/OpenCloseFunction -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/OpenCloseFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/ActuatingFunction"/>
+        <rdfs:comment xml:lang="en">An actuating function that allows to open and close a device</rdfs:comment>
+        <rdfs:label xml:lang="en">Open close function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/OpenCloseState -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/OpenCloseState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/State"/>
+        <rdfs:comment xml:lang="en">A type of state</rdfs:comment>
+        <rdfs:label xml:lang="en">Open close state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/OpenCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/OpenCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/actsUpon"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/OpenCloseState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/OpenCloseFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Open command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/OpenState -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/OpenState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/OpenCloseState"/>
+        <rdfs:comment xml:lang="en">The state of a device that is OPEN </rdfs:comment>
+        <rdfs:label xml:lang="en">Open state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/PauseCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/PauseCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Command"/>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Pause command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Power -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Power">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment xml:lang="en">A saref:Property related to some measurements that are characterized by a certain value that is measured in a power unit (such as watt or kilowatt).  Further specializations of the saref:Power class can be found in the SAREF4ENER extension, where classes such as PowerMax, PowerMin and PowerExpected are defined.</rdfs:comment>
+        <rdfs:label xml:lang="en">Power</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/PowerUnit -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/PowerUnit">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+        <rdfs:comment xml:lang="en">The unit of measure for power</rdfs:comment>
+        <rdfs:label xml:lang="en">Power unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Pressure -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Pressure">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment xml:lang="en">A saref:Property related to some measurements that are characterized by a certain value that is measured in a pressure unit (bar or pascal)</rdfs:comment>
+        <rdfs:label xml:lang="en">Pressure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/PressureUnit -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/PressureUnit">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+        <rdfs:comment xml:lang="en">The unit of measure for pressure</rdfs:comment>
+        <rdfs:label xml:lang="en">Pressure unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Price -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Price">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment xml:lang="en">A saref:Property crelated to some measurements that are characterized by a certain value that is measured using saref:Currency</rdfs:comment>
+        <rdfs:label xml:lang="en">Price</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Profile -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Profile">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/consistsOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Profile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasPrice"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Price"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasTime"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Time"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isAbout"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://saref.etsi.org/core/Commodity"/>
+                            <rdf:Description rdf:about="https://saref.etsi.org/core/Property"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A specification associated to a device to collect information about a certain Property (e.g., Energy) for optimizing its usage in the home, office or building in which the device is located. This specification is about a certain Property (saref:isAbout), can be calculated over a time span (saref:hasTime) and can be associated to some costs (saref:hasPrice). An example is the Power Profile defined in the SAREF4ENER extension that can be associated to a device for optimizing the Energy efficiency in the home, office or building in which the device is located.</rdfs:comment>
+        <rdfs:label xml:lang="en">Profile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Property -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Property">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isControlledByDevice"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isMeasuredByDevice"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isPropertyOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/relatesToMeasurement"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature</rdfs:comment>
+        <rdfs:label xml:lang="en">Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/SensingFunction -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/SensingFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasSensingRange"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasSensorType"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A function that allows to transmit data from sensors, such as measurement values (e.g., temperature) or sensing data (e.g., occupancy)</rdfs:comment>
+        <rdfs:label xml:lang="en">Sensing function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Sensor -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Sensor">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/SensingFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. Further, a device of category saref:Sensor that performs a saref:SensingFunction.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Service -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Service">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isOfferedBy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/core/Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/represents"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/core/Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A service is a representation of a function to a network that makes the function discoverable, registerable, remotely controllable by other devices in the network. A service can represent one or more functions. A Service is offered by a device that wants (a certain set of) its function(s) to be discoverable, registerable, remotely controllable by other devices in the network. A Service must specify the device that is offering the service and the function(s) to be represented.</rdfs:comment>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/SetAbsoluteLevelCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/SetAbsoluteLevelCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/SetLevelCommand"/>
+        <rdfs:comment xml:lang="en">A type of set level command</rdfs:comment>
+        <rdfs:label xml:lang="en">Set absolute level command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/SetLevelCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/SetLevelCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/actsUpon"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/MultiLevelState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/LevelControlFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Set level command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/SetRelativeLevelCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/SetRelativeLevelCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/SetLevelCommand"/>
+        <rdfs:comment xml:lang="en">A type of set level command</rdfs:comment>
+        <rdfs:label xml:lang="en">Set relative level command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Smoke -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Smoke">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment xml:lang="en">A saref:Property related to some measurements that are characterized by a certain value that is measured in a unit of measure for smoke</rdfs:comment>
+        <rdfs:label xml:lang="en">Smoke</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/SmokeSensor -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/SmokeSensor">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/EventFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/SensingFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/measuresProperty"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/Smoke"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A sensor that performs the saref:SensingFunction and the saref:EventFunction, and is used for the purpose of sensing a property of type saref:Smoke. A saref:SmokeSensor is typically used to saref:accomplish saref:Safety.</rdfs:comment>
+        <rdfs:label xml:lang="en">Smoke sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/StartCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/StartCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/actsUpon"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/StartStopState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/StartStopFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://saref.etsi.org/core/StopCommand"/>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Start command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/StartState -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/StartState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/StartStopState"/>
+        <rdfs:comment xml:lang="en">The state of a device that is STARTED</rdfs:comment>
+        <rdfs:label xml:lang="en">Start state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/StartStopFunction -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/StartStopFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/ActuatingFunction"/>
+        <rdfs:comment xml:lang="en">An actuating function that allows to start and stop a device</rdfs:comment>
+        <rdfs:label xml:lang="en">Start stop function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/StartStopState -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/StartStopState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/State"/>
+        <rdfs:comment xml:lang="en">A type of state</rdfs:comment>
+        <rdfs:label xml:lang="en">Start stop state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/State -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/State">
+        <rdfs:comment xml:lang="en">The state in which a device can be found, e.g, ON/OFF/STANDBY, or ONLINE/OFFLINE. We propose here a list of states that are relevant for the purpose of SAREF, but this list can be extended.</rdfs:comment>
+        <rdfs:label xml:lang="en">State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/StepDownCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/StepDownCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/actsUpon"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/MultiLevelState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/LevelControlFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://saref.etsi.org/core/StepUpCommand"/>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Step down command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/StepUpCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/StepUpCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/actsUpon"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/MultiLevelState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/LevelControlFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Step up command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/StopCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/StopCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/actsUpon"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/StartStopState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/StartStopFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Stop command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/StopState -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/StopState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/StartStopState"/>
+        <rdfs:comment xml:lang="en">The state of a device that is STOPPED</rdfs:comment>
+        <rdfs:label xml:lang="en">Stop state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Switch -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Switch">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Actuator"/>
+        <rdfs:comment xml:lang="en">A device of category saref:Actuator that performs an actuating function of type saref:OnOffFunction or saref:OpenCloseFunction</rdfs:comment>
+        <rdfs:label xml:lang="en">Switch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/SwitchOnService -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/SwitchOnService">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Service"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isOfferedBy"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/LightSwitch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/represents"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of service that represents an on/off function to the network</rdfs:comment>
+        <rdfs:label xml:lang="en">Switch on service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Task -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Task">
+        <rdfs:comment xml:lang="en">The goal for which a device is designed (from a user perspective). For example, a washing machine is designed for the task of washing. We propose here a list of tasks that are relevant for the purpose of SAREF, but this list can be extended. Tasks can be accomplished by devices (saref:isAccomplishedBy).</rdfs:comment>
+        <rdfs:label xml:lang="en">Task</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Temperature -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Temperature">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment xml:lang="en">A saref:Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)</rdfs:comment>
+        <rdfs:label xml:lang="en">Temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/TemperatureSensor -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/TemperatureSensor">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/SensingFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/measuresProperty"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/Temperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A sensor that is used for the purpose of sensing a property of type saref:Temperature. A saref:TemperatureSensor is typically used to saref:accomplish saref:Comfort.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temperature sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/TemperatureUnit -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/TemperatureUnit">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+        <rdfs:comment xml:lang="en">The unit of measure for temperature</rdfs:comment>
+        <rdfs:label xml:lang="en">Temperature unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Time -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Time">
+        <rdfs:comment xml:lang="en">A class that allows to specify the time concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">Time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/ToggleCommand -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/ToggleCommand">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Toggle command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/UnitOfMeasure -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/UnitOfMeasure">
+        <rdfs:comment xml:lang="en">The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called &quot;watt&quot;. Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of SAREF, but this list can be extended, also using some other ontologies rather than the Ontology of units of Measure (OM).</rdfs:comment>
+        <rdfs:label xml:lang="en">Unit of measure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Water -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Water">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Commodity"/>
+        <rdfs:comment xml:lang="en">A type of commodity</rdfs:comment>
+        <rdfs:label xml:lang="en">Water</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#AlarmXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#AlarmXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailureMotionSensorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailureMotionSensorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityMotionSensorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityMotionSensorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailureMotionSensorXM"/>
+        <NetworkI:O rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</NetworkI:O>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FailureSmartThingsHub -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FailureSmartThingsHub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmartThingsHub"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareFailureLeakDetectionXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareFailureLeakDetectionXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLeakDetectionXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLeakDetectionXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLightBulbXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLightBulbXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailureTempSensorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailureTempSensorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartMotionSensorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartMotionSensorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartSmokeSensorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartSmokeSensorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartTempSensorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartTempSensorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceAlarmXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceAlarmXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance"/>
+        <happensAt rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#AlarmXM"/>
+        <hasRecoveryAction rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartAlarmXM"/>
+        <hasFailureCode>0x3432</hasFailureCode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance"/>
+        <happensAt rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#LeakDetectorMX"/>
+        <hasRecoveryAction rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLeakDetectionXM"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareFailureLeakDetectionXM"/>
+        <hasFailureCode>0x8564000</hasFailureCode>
+        <NetworkI:O rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</NetworkI:O>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLighBulbXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLighBulbXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance"/>
+        <happensAt rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#LightBulbXM"/>
+        <hasRecoveryAction rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLightBulbXM"/>
+        <hasFailureCode>0x23442</hasFailureCode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance"/>
+        <happensAt rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM"/>
+        <hasRecoveryAction rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartSmokeSensorXM"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM"/>
+        <hasFailureCode>0x234</hasFailureCode>
+        <BatteryLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">203</BatteryLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance"/>
+        <happensAt rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM"/>
+        <hasRecoveryAction rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailureTempSensorXM"/>
+        <hasFailureCode>0x801</hasFailureCode>
+        <CPUUsage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</CPUUsage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#LeakDetectorMX -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#LeakDetectorMX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#LightBulbXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#LightBulbXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#MotionSensorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#MotionSensorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailureMotionSensorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailureMotionSensorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SmartThingsHub -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SmartThingsHub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmartThingsHub -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmartThingsHub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmokeSensorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmokeSensorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureTempSensorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureTempSensorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartAlarmXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartAlarmXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartSmokeSensorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartSmokeSensorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateSmartThingsHub -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateSmartThingsHub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateTempSensorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateTempSensorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Spike"/>
+        <happensAt rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM"/>
+        <hasRecoveryAction rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateTempSensorXM"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureTempSensorXM"/>
+        <hasFailureCode>0x80000000</hasFailureCode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtMotionSensor -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtMotionSensor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt"/>
+        <happensAt rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#MotionSensorXM"/>
+        <hasRecoveryAction rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartMotionSensorXM"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailureMotionSensorXM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt"/>
+        <happensAt rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM"/>
+        <hasRecoveryAction rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartSmokeSensorXM"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmokeSensorXM"/>
+        <hasFailureCode>0x345</hasFailureCode>
+        <MemoryUsage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1005</MemoryUsage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/core/Cleaning -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/core/Cleaning">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">Cleaning</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/core/Comfort -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/core/Comfort">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">Comfort</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/core/Drying -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/core/Drying">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">Drying</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/core/EnergyEfficiency -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/core/EnergyEfficiency">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">EnergyEfficiency</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/core/Entertainment -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/core/Entertainment">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">Entertainment</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/core/Lighting -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/core/Lighting">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">Lighting</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/core/MeterReading -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/core/MeterReading">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">Meter reading</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/core/Safety -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/core/Safety">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">Safety</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/core/Washing -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/core/Washing">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">Washing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/core/WellBeing -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/core/WellBeing">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">WellBeing</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
