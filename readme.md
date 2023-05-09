@@ -10,7 +10,7 @@ The ontology documentation is built using the [Widoco](https://github.com/dgarij
 
 ## License
  
- This software is distributed under [BSD-3-Clause](LICENSE). 
+ This software is distributed under [BSD-3-Clause](LICENCE). 
 
 Copyright (c) 2023 Orange
 
