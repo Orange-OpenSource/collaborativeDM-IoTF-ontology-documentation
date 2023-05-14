@@ -7,7 +7,20 @@ The IoT failure Management ontology (IoT-F) aims to provide a reference model fo
  4. Allow our cooperative agents [OSAMA](https://github.com/Orange-OpenSource/collaborativeDM-OSAMA-agent) to understand failure data to perform collaborative and automatic cascading failure recovery.
 ![alt text](https://github.com/Orange-OpenSource/collaborativeDM-IoTF-ontology-documentation/blob/master/iotf.png?raw=true)
 The ontology documentation is built using the [Widoco](https://github.com/dgarijo/Widoco) toolset, and can be accessed via [IoT-F Ontology](https://iotfontology.github.io/).
-
+# Diagnosis Sparql Query
+'''
+"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"+
+                             "PREFIX owl: <http://www.w3.org/2002/07/owl#>"+
+                             "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"+
+                             "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>"+
+                             "PREFIX iotf: <http://www.semanticweb.org/orangeinnovation/IoTF#>\n"+
+             "SELECT ?deviceType ?failureMode ?failureCause ?recoveryAction ?failureCode ?batteryLevel ?memoryUsage ?cpuUsage"+
+	       "WHERE { ?failureMode rdf:type iotf:FailureMode."+
+	               "?failureMode iotf:hasRecoveryAction ?recoveryAction."+
+	               "?failureMode iotf:happensAt ?deviceType."+
+	               "OPTIONAL {?failureMode iotf:hasFailureCode ?failureCode. }.OPTIONAL {?failureMode iotf:BatteryLevel ?batteryLevel. }.OPTIONAL {?failureMode iotf:MemoryUsage ?memoryUsage }.OPTIONAL {?failureMode iotf:CPUUsage ?cpuUsage}."+
+              "Filter([a set of failure sympthoms])}";
+'''
 ## License
  
  This software is distributed under [BSD-3-Clause](LICENCE). 
