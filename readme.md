@@ -8,7 +8,7 @@ The IoT failure Management ontology (IoT-F) aims to provide a reference model fo
 ![alt text](https://github.com/Orange-OpenSource/collaborativeDM-IoTF-ontology-documentation/blob/master/iotf.png?raw=true)
 The ontology documentation is built using the [Widoco](https://github.com/dgarijo/Widoco) toolset, and can be accessed via [IoT-F Ontology](https://iotfontology.github.io/).
 # Diagnosis Sparql Query
-'''
+```
 "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"+
                              "PREFIX owl: <http://www.w3.org/2002/07/owl#>"+
                              "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"+
@@ -20,7 +20,7 @@ The ontology documentation is built using the [Widoco](https://github.com/dgarij
 	               "?failureMode iotf:happensAt ?deviceType."+
 	               "OPTIONAL {?failureMode iotf:hasFailureCode ?failureCode. }.OPTIONAL {?failureMode iotf:BatteryLevel ?batteryLevel. }.OPTIONAL {?failureMode iotf:MemoryUsage ?memoryUsage }.OPTIONAL {?failureMode iotf:CPUUsage ?cpuUsage}."+
               "Filter([a set of failure sympthoms])}";
-'''
+```
 ## License
  
  This software is distributed under [BSD-3-Clause](LICENCE). 
