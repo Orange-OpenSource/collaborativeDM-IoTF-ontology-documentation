@@ -14,12 +14,12 @@ The ontology documentation is built using the [Widoco](https://github.com/dgarij
                              "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"+
                              "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>"+
                              "PREFIX iotf: <http://www.semanticweb.org/orangeinnovation/IoTF#>\n"+
-             "SELECT ?deviceType ?failureMode ?failureCause ?recoveryAction ?failureCode ?batteryLevel ?memoryUsage ?cpuUsage"+
-	       "WHERE { ?failureMode rdf:type iotf:FailureMode."+
-	               "?failureMode iotf:hasRecoveryAction ?recoveryAction."+
-	               "?failureMode iotf:happensAt ?deviceType."+
-	               "OPTIONAL {?failureMode iotf:hasFailureCode ?failureCode. }.OPTIONAL {?failureMode iotf:BatteryLevel ?batteryLevel. }.OPTIONAL {?failureMode iotf:MemoryUsage ?memoryUsage }.OPTIONAL {?failureMode iotf:CPUUsage ?cpuUsage}."+
-              "Filter([a set of failure sympthoms])}";
+"SELECT ?deviceType ?failureMode ?recoveryAction [Failure Symptoms ex: ?failureCode]"+
+  "WHERE { ?failureMode rdf:type iotf:FailureMode."+
+      "?failureMode iotf:hasRecoveryAction ?recoveryAction."+
+      "?failureMode iotf:happensAt ?deviceType."+
+      "OPTIONAL {?failureMode iotf:hasFailureSymptom [Failure Symptoms ex: ?failureCode]. }"+
+      "Filter([a set of failure sympthoms])}";
 ```
 ## License
  
