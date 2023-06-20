@@ -7,7 +7,7 @@ The IoT failure Management ontology (IoT-F) aims to provide a reference model fo
  4. Allow our cooperative agents [OSAMA](https://github.com/Orange-OpenSource/collaborativeDM-OSAMA-agent) to understand failure data to perform collaborative and automatic cascading failure recovery.
 ![alt text](https://github.com/Orange-OpenSource/collaborativeDM-IoTF-ontology-documentation/blob/master/iotf.png?raw=true)
 The ontology documentation is built using the [Widoco](https://github.com/dgarijo/Widoco) toolset, and can be accessed via [IoT-F Ontology](https://iotfontology.github.io/).
-## IoT-F ontology Compentency Questions (CQ)
+## Main Competency Questions (CQ) of the IoT-F ontology
 ```
 – CQ1. What are managed IoT device type?
 – CQ2. For each IoT device type, what are its failure modes?
