@@ -18,17 +18,17 @@ The ontology documentation is built using the [Widoco](https://github.com/dgarij
 ```
 ## Diagnosis Sparql Query
 ```
-"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"+
-                             "PREFIX owl: <http://www.w3.org/2002/07/owl#>"+
-                             "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"+
-                             "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>"+
-                             "PREFIX iotf: <http://www.semanticweb.org/orangeinnovation/IoTF#>\n"+
-"SELECT ?deviceType ?failureMode ?recoveryAction [Failure Symptoms ex: ?failureCode]"+
-  "WHERE { ?failureMode rdf:type iotf:FailureMode."+
-      "?failureMode iotf:hasRecoveryAction ?recoveryAction."+
-      "?failureMode iotf:happensAt ?deviceType."+
-      "OPTIONAL {?failureMode iotf:hasFailureSymptom [Failure Symptoms ex: ?failureCode]. }"+
-      "Filter([a set of failure sympthoms])}";
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX iotf: <http://www.semanticweb.org/orangeinnovation/IoTF#>
+SELECT ?deviceType ?failureMode ?recoveryAction [Failure Symptoms ex: ?failureCode]
+WHERE { ?failureMode rdf:type iotf:FailureMode.
+?failureMode iotf:hasRecoveryAction ?recoveryAction.
+?failureMode iotf:happensAt ?deviceType.
+ OPTIONAL {?failureMode iotf:hasFailureSymptom [Failure Symptoms ex: ?failureCode]. }
+Filter([a set of failure sympthoms])}
 ```
 ## License
  
