@@ -8,6 +8,7 @@ The IoT failure Management ontology (IoT-F) aims to provide a reference model fo
 ![alt text](https://github.com/Orange-OpenSource/collaborativeDM-IoTF-ontology-documentation/blob/master/iotf.png?raw=true)
 The ontology documentation is built using the [Widoco](https://github.com/dgarijo/Widoco) toolset, and can be accessed via [IoT-F Ontology](https://iotfontology.github.io/).
 ## Main Competency Questions (CQ) of the IoT-F ontology
+
 ```
 – CQ1. What are managed IoT device type?
 – CQ2. For each IoT device type, what are its failure modes?
@@ -16,6 +17,7 @@ The ontology documentation is built using the [Widoco](https://github.com/dgarij
 – CQ5. For each failure mode, what are its causes?
 – CQ6. For each failure mode, what are its possible recovery actions?
 ```
+SPARQL Queries to aswer the compentency questions of the IoT-F ontology [CQ-SPARQL](https://github.com/dgarijo/Widoco)
 ## Diagnosis Sparql Query
 ```
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
