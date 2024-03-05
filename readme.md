@@ -1,5 +1,5 @@
 
-# IoT-F: IoT Failure Ontology ontology v2 alignnment with [saref new version](https://www.etsi.org/deliver/etsi_ts/103200_103299/103264/03.02.01_60/ts_103264v030201p.pdf)
+# IoT-F: IoT Failure Ontology ontology v2 alignment with [saref new version](https://www.etsi.org/deliver/etsi_ts/103200_103299/103264/03.02.01_60/ts_103264v030201p.pdf)
 The IoT failure Management ontology (IoT-F) aims to provide a reference model for the IoT failure management domain. Device manufacturers will use this shared model to build a shared knowledge base, enabling efficient IoT failure diagnosis and IoT failure impact analysis. More precisely, it enables the following usages:
  1. Connect distributed and heterogeneous IoT failure diagnosis information governed by different device manufacturers.
  2. Help IoT device manufacturers in structuring IoT device failure information.
