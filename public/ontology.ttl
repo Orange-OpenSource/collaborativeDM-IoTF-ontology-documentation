@@ -1,0 +1,700 @@
+@prefix : <http://www.semanticweb.org/orangeinnovation/IoTF#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/orangeinnovation/IoTF#> .
+
+<http://www.semanticweb.org/orangeinnovation/IoTF> rdf:type owl:Ontology ;
+                                                    owl:imports <https://saref.etsi.org/core/> ;
+                                                    <http://purl.org/dc/terms/description> "IoT-F reprensents failures of IoT systems." ;
+                                                    <http://purl.org/dc/terms/title> "IoT Failure ontology" ;
+                                                    <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.semanticweb.org/orangeinnovation/IoTF" ;
+                                                    owl:versionIRI "http://www.semanticweb.org/orangeinnovation/IoTF/0.0.1" ;
+                                                    owl:versionInfo "0.0.1" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/example
+<http://purl.org/vocab/vann/example> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel
+:BatteryLevel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage
+:CPUUsage rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage
+:MemoryUsage rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O
+<http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#cardinality
+owl:cardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#historyNote
+<http://www.w3.org/2004/02/skos/core#historyNote> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#becauseOf
+:becauseOf rdf:type owl:ObjectProperty ;
+           rdfs:domain :FailureMode ;
+           rdfs:range :FailureMode .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#effectIs
+:effectIs rdf:type owl:ObjectProperty ;
+          rdfs:domain :FailureMode ;
+          rdfs:range :FailureMode .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#happensAt
+:happensAt rdf:type owl:ObjectProperty ;
+           rdfs:domain :FailureMode ;
+           rdfs:range :FeatureKind .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#hasDeviceType
+:hasDeviceType rdf:type owl:ObjectProperty ;
+               rdfs:range :FeatureKind .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction
+:hasRecoveryAction rdf:type owl:ObjectProperty ;
+                   rdfs:domain :FailureMode ;
+                   rdfs:range :CompensatoryAction .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#hasSymptom
+:hasSymptom rdf:type owl:ObjectProperty ;
+            rdfs:domain :FailureMode ;
+            rdfs:range :PropertyValue .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy
+:isCausedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :FailureMode ;
+            rdfs:range :FailureCause .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#producesEffect
+:producesEffect rdf:type owl:ObjectProperty ;
+                rdfs:domain :FailureMode ;
+                rdfs:range :FailureEffect .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> rdf:type owl:ObjectProperty .
+
+
+###  https://saref.etsi.org/core/hasDeviceKind
+<https://saref.etsi.org/core/hasDeviceKind> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf <https://saref.etsi.org/core/hasFeatureKind> ;
+                                            rdfs:domain :Device ;
+                                            rdfs:range <https://saref.etsi.org/core/FeatureKind> ;
+                                            rdfs:comment "Links a device to its kind, a feature kind. Kinds of devices describe models of devices, with common properties having the same value, common states being the same, common functions, and common services."@en ;
+                                            rdfs:label "has device kind"@en .
+
+
+###  https://saref.etsi.org/core/hasFeatureKind
+<https://saref.etsi.org/core/hasFeatureKind> rdf:type owl:ObjectProperty .
+
+
+###  https://saref.etsi.org/core/hasPropertyValue
+<https://saref.etsi.org/core/hasPropertyValue> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain :Device ;
+                                               rdfs:range <https://saref.etsi.org/core/PropertyValue> ;
+                                               owl:propertyChainAxiom ( <http://www.w3.org/2004/02/skos/core#broader>
+                                                                        <https://saref.etsi.org/core/hasPropertyValue>
+                                                                      ) ;
+                                               rdfs:comment "Links a feature kind, a feature of interest, or a property of interest, to a property value."@en ;
+                                               rdfs:label "has property value"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#historyNote> "V3.2.1: Introduced saref:hasPropertyValue."@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode
+:hasFailureCode rdf:type owl:DatatypeProperty ;
+                rdfs:domain :FailureMode ;
+                rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://org.semanticweb.owlapi/error#Error1
+<http://org.semanticweb.owlapi/error#Error1> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#AudioOutputFault
+:AudioOutputFault rdf:type owl:Class ;
+                  rdfs:subClassOf :HardwareFailure .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#BLEFault
+:BLEFault rdf:type owl:Class ;
+          rdfs:subClassOf :RadioFault .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#BatteryFluctuation
+:BatteryFluctuation rdf:type owl:Class ;
+                    rdfs:subClassOf :PowerFailure .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel
+:BatteryLevel rdf:type owl:Class ;
+              rdfs:subClassOf :PropertyValue .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage
+:CPUUsage rdf:type owl:Class ;
+          rdfs:subClassOf :PropertyValue .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#Calibration
+:Calibration rdf:type owl:Class ;
+             rdfs:subClassOf :NonFailStop ;
+             rdfs:comment "happens when sensor data may have offset or have a different gain from the ground truth values." .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#CellularFault
+:CellularFault rdf:type owl:Class ;
+               rdfs:subClassOf :RadioFault .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure
+:CommunicationFailure rdf:type owl:Class ;
+                      rdfs:subClassOf :FailureMode .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#CompensatoryAction
+:CompensatoryAction rdf:type owl:Class ;
+                    rdfs:comment "denotes actions that allows recovering a device from a given failure." .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure
+:ConnectivityFailure rdf:type owl:Class ;
+                     rdfs:subClassOf :FailureCause ;
+                     rdfs:comment "represents failure cause related to the connectivity." .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#Device
+:Device rdf:type owl:Class ;
+        owl:equivalentClass <https://saref.etsi.org/core/Device> .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#Environnment
+:Environnment rdf:type owl:Class ;
+              rdfs:subClassOf :FailureCause ;
+              rdfs:comment "represents failure cause related to the environment." .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#EthernetFault
+:EthernetFault rdf:type owl:Class ;
+               rdfs:subClassOf :RadioFault .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#FailStop
+:FailStop rdf:type owl:Class ;
+          rdfs:subClassOf :FailureMode ;
+          rdfs:comment "happens when a device stops functioning and is un-responsive to external requests." .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause
+:FailureCause rdf:type owl:Class ;
+              rdfs:comment "denotes the cause of a failure." .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#FailureEffect
+:FailureEffect rdf:type owl:Class ;
+               rdfs:comment "represents the effects of a failure mode." .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode
+:FailureMode rdf:type owl:Class ;
+             rdfs:comment "a form of a dysfunction related to an IoTdevice." .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind
+:FeatureKind rdf:type owl:Class ;
+             owl:equivalentClass <https://saref.etsi.org/core/FeatureKind> ;
+             rdfs:comment "denotes a type of a market IoT device e.g., FIBARO light bulb." .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate
+:FirmwareUpdate rdf:type owl:Class ;
+                rdfs:subClassOf :CompensatoryAction .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareVersion
+:FirmwareVersion rdf:type owl:Class ;
+                 rdfs:subClassOf :PropertyValue .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure
+:HardwareFailure rdf:type owl:Class ;
+                 rdfs:subClassOf :FailureCause ;
+                 rdfs:comment "represents failure cause related to the hardware." .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart
+:HardwareRestart rdf:type owl:Class ;
+                 rdfs:subClassOf :CompensatoryAction .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#HardwareVersion
+:HardwareVersion rdf:type owl:Class ;
+                 rdfs:subClassOf :PropertyValue .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance
+:HighVariance rdf:type owl:Class ;
+              rdfs:subClassOf :NonFailStop ;
+              rdfs:comment "A high variance failure appears when a device’s state fluctuates back and forth more rapidly than the environment dictates." .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#LowBattery
+:LowBattery rdf:type owl:Class ;
+            rdfs:subClassOf :PowerFailure .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage
+:MemoryUsage rdf:type owl:Class ;
+             rdfs:subClassOf :PropertyValue .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#NFCFault
+:NFCFault rdf:type owl:Class ;
+          rdfs:subClassOf :RadioFault .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop
+:NonFailStop rdf:type owl:Class ;
+             rdfs:subClassOf :FailureMode ;
+             rdfs:comment "failure relate to a response by the device that diverges from the desired device state." .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#NonVolatileMemoryError
+:NonVolatileMemoryError rdf:type owl:Class ;
+                        rdfs:subClassOf :HardwareFailure .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#Omission
+:Omission rdf:type owl:Class ;
+          rdfs:subClassOf :CommunicationFailure .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#Outlier
+:Outlier rdf:type owl:Class ;
+         rdfs:subClassOf :NonFailStop ;
+         rdfs:comment "an outlier failure occurs when a device to report an incorrect state for a very brief period, usually theduration of just 1 poll." .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure
+:PowerFailure rdf:type owl:Class ;
+              rdfs:subClassOf :FailureCause ;
+              rdfs:comment "reprensents failure cause related to power e.g, battery level." .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#PowerSource
+:PowerSource rdf:type owl:Class ;
+             rdfs:subClassOf :HardwareFailure .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue
+:PropertyValue rdf:type owl:Class ;
+               owl:equivalentClass <https://saref.etsi.org/core/PropertyValue> .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault
+:RadioFault rdf:type owl:Class ;
+            rdfs:subClassOf :HardwareFailure .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#RebootCount
+:RebootCount rdf:type owl:Class ;
+             rdfs:subClassOf :PropertyValue .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure
+:SoftwareFailure rdf:type owl:Class ;
+                 rdfs:subClassOf :FailureCause ;
+                 rdfs:comment "represents failure cause related to software." .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart
+:SoftwareRestart rdf:type owl:Class ;
+                 rdfs:subClassOf :CompensatoryAction .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate
+:SoftwareUpdate rdf:type owl:Class ;
+                rdfs:subClassOf :CompensatoryAction .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareVersion
+:SoftwareVersion rdf:type owl:Class ;
+                 rdfs:subClassOf :PropertyValue .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#Spike
+:Spike rdf:type owl:Class ;
+       rdfs:subClassOf :NonFailStop ;
+       rdfs:comment "A spike fault happens when there is a rapid increase or decrease in the device state." .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt
+:StuckAt rdf:type owl:Class ;
+         rdfs:subClassOf :NonFailStop ;
+         rdfs:comment "A stuck-at failure happens when a device cannot change state, maintaining the same state despite changes in environment or actuation commands." .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#Temperature
+:Temperature rdf:type owl:Class ;
+             rdfs:subClassOf :PropertyValue .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#ThreadFault
+:ThreadFault rdf:type owl:Class ;
+             rdfs:subClassOf :RadioFault .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#Timing
+:Timing rdf:type owl:Class ;
+        rdfs:subClassOf :CommunicationFailure .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#TotalOperationalTime
+:TotalOperationalTime rdf:type owl:Class ;
+                      rdfs:subClassOf :PropertyValue .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#UpTime
+:UpTime rdf:type owl:Class ;
+        rdfs:subClassOf :PropertyValue .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#UserInterfaceFault
+:UserInterfaceFault rdf:type owl:Class ;
+                    rdfs:subClassOf :HardwareFailure .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#VisualDisplayFault
+:VisualDisplayFault rdf:type owl:Class ;
+                    rdfs:subClassOf :HardwareFailure .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#WIFIFault
+:WIFIFault rdf:type owl:Class ;
+           rdfs:subClassOf :RadioFault .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O
+<http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O> rdf:type owl:Class ;
+                                                              rdfs:subClassOf :PropertyValue .
+
+
+###  https://saref.etsi.org/core/Device
+<https://saref.etsi.org/core/Device> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://saref.etsi.org/core/FeatureOfInterest> ,
+                                                     <https://saref.etsi.org/saref4syst/System> ;
+                                     rdfs:comment "A tangible object designed to accomplish a particular task. In order to accomplish this task, the device performs one or more functions. An instance of saref:Device represents one specific real world entity."@en ;
+                                     rdfs:label "Device"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#example> "Examples of devices are a light switch, a temperature sensor, an energy meter, a water flow meter, and a laundry dryer. A laundry dryer is designed to dry laundry, and to accomplish this task it has a start/stop function."@en ,
+                                                                                   "For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function."@en ;
+                                     <http://www.w3.org/2004/02/skos/core#historyNote> "V3.2.1: Most axioms on saref:Device were useless and have been deleted."@en ,
+                                                                                       "V3.2.1: definition of saref:Device clarifies it's a real world entity."@en ,
+                                                                                       "V3.2.1: saref:Device is explicitly a subclass of saref:FeatureOfInterest and s4syst:System."@en .
+
+
+###  https://saref.etsi.org/core/FeatureKind
+<https://saref.etsi.org/core/FeatureKind> rdf:type owl:Class ;
+                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://www.w3.org/2004/02/skos/core#broader> ;
+                                                            owl:allValuesFrom <https://saref.etsi.org/core/FeatureKind>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://www.w3.org/2004/02/skos/core#narrower> ;
+                                                            owl:allValuesFrom <https://saref.etsi.org/core/FeatureKind>
+                                                          ] ;
+                                          rdfs:comment "Feature kinds allow to describe kinds of features of interest, with common properties having the same value, and common states being the same. An instance of saref:FeatureKind represents an archetype of real world entities, for example to populate product catalogs."@en ;
+                                          rdfs:label "Feature kinds"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#historyNote> "V3.2.1: Introduced class saref:FeatureKind"@en ,
+                                                                                            "V3.2.1: Use SKOS to organize generic classes in taxonomies."@en .
+
+
+###  https://saref.etsi.org/core/FeatureOfInterest
+<https://saref.etsi.org/core/FeatureOfInterest> rdf:type owl:Class .
+
+
+###  https://saref.etsi.org/core/PropertyValue
+<https://saref.etsi.org/core/PropertyValue> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error1> ;
+                                            rdfs:comment "Describes the value for a property. The property value is linked to its value expressed as an RDF literal (DP saref:hasValue), optionally to the unit of measurement (OP saref:isMeasuredIn), and optionally to the properties or properties of interest it is a value of (OP saref:isValueOfProperty)."@en ;
+                                            rdfs:label "Property Value"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#historyNote> "V3.2.1: Introduced saref:PropertyValue to simplify the association of a measure to a property, without always needing it to be a measurement made by a device."@en .
+
+
+###  https://saref.etsi.org/saref4syst/System
+<https://saref.etsi.org/saref4syst/System> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#AlarmXM
+:AlarmXM rdf:type owl:NamedIndividual ,
+                  :FeatureKind .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailureMotionSensorXM
+:ConnectivityFailureMotionSensorXM rdf:type owl:NamedIndividual ,
+                                            :ConnectivityFailure .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityMotionSensorXM
+:ConnectivityMotionSensorXM rdf:type owl:NamedIndividual ,
+                                     :FailureMode ;
+                            :isCausedBy :ConnectivityFailureMotionSensorXM ;
+                            <http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O> 1000 .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#FailureSmartThingsHub
+:FailureSmartThingsHub rdf:type owl:NamedIndividual ,
+                                :FailureMode ;
+                       :isCausedBy :SoftwareFailureSmartThingsHub .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareFailureLeakDetectionXM
+:FirmwareFailureLeakDetectionXM rdf:type owl:NamedIndividual ,
+                                         :SoftwareFailure .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLeakDetectionXM
+:FirmwareUpdateLeakDetectionXM rdf:type owl:NamedIndividual ,
+                                        :FirmwareUpdate .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLightBulbXM
+:FirmwareUpdateLightBulbXM rdf:type owl:NamedIndividual ,
+                                    :FirmwareUpdate .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailureTempSensorXM
+:HardwareFailureTempSensorXM rdf:type owl:NamedIndividual ,
+                                      :HardwareFailure .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartMotionSensorXM
+:HardwareRestartMotionSensorXM rdf:type owl:NamedIndividual ,
+                                        :HardwareRestart .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartSmokeSensorXM
+:HardwareRestartSmokeSensorXM rdf:type owl:NamedIndividual ,
+                                       :HardwareRestart .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartTempSensorXM
+:HardwareRestartTempSensorXM rdf:type owl:NamedIndividual ,
+                                      :HardwareRestart .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceAlarmXM
+:HighVarianceAlarmXM rdf:type owl:NamedIndividual ,
+                              :FailureMode ,
+                              :HighVariance ;
+                     :happensAt :AlarmXM ;
+                     :hasRecoveryAction :SoftwareRestartAlarmXM ;
+                     :hasFailureCode "0x3432" .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM
+:HighVarianceLeakDetectorXM rdf:type owl:NamedIndividual ,
+                                     :FailureMode ,
+                                     :HighVariance ;
+                            :happensAt :LeakDetectorMX ;
+                            :hasRecoveryAction :FirmwareUpdateLeakDetectionXM ;
+                            :isCausedBy :FirmwareFailureLeakDetectionXM ;
+                            :hasFailureCode "0x8564000" ;
+                            <http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O> 1000 .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLighBulbXM
+:HighVarianceLighBulbXM rdf:type owl:NamedIndividual ,
+                                 :FailureMode ,
+                                 :HighVariance ;
+                        :happensAt :LightBulbXM ;
+                        :hasRecoveryAction :FirmwareUpdateLightBulbXM ;
+                        :hasFailureCode "0x23442" .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM
+:HighVarianceSmokeSensorXM rdf:type owl:NamedIndividual ,
+                                    :FailureMode ,
+                                    :HighVariance ;
+                           :happensAt :SmokeSensorXM ;
+                           :hasRecoveryAction :HardwareRestartSmokeSensorXM ;
+                           :isCausedBy :HighVarianceSmokeSensorXM ;
+                           :hasFailureCode "0x234" ;
+                           :BatteryLevel 203 .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM
+:HighVarianceTempSensorXM rdf:type owl:NamedIndividual ,
+                                   :FailureMode ,
+                                   :HighVariance ;
+                          :happensAt :TempSensorXM ;
+                          :hasRecoveryAction :HighVarianceTempSensorXM ;
+                          :isCausedBy :HardwareFailureTempSensorXM ;
+                          :hasFailureCode "0x801" ;
+                          :CPUUsage 1000 .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#LeakDetectorMX
+:LeakDetectorMX rdf:type owl:NamedIndividual ,
+                         :FeatureKind .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#LightBulbXM
+:LightBulbXM rdf:type owl:NamedIndividual ,
+                      :FeatureKind .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#MotionSensorXM
+:MotionSensorXM rdf:type owl:NamedIndividual ,
+                         :FeatureKind .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailureMotionSensorXM
+:PowerFailureMotionSensorXM rdf:type owl:NamedIndividual ,
+                                     :PowerFailure .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#SmartThingsHub
+:SmartThingsHub rdf:type owl:NamedIndividual ,
+                         :FeatureKind .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM
+:SmokeSensorXM rdf:type owl:NamedIndividual ,
+                        :FeatureKind .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmartThingsHub
+:SoftwareFailureSmartThingsHub rdf:type owl:NamedIndividual ,
+                                        :SoftwareFailure .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmokeSensorXM
+:SoftwareFailureSmokeSensorXM rdf:type owl:NamedIndividual ,
+                                       :SoftwareFailure .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureTempSensorXM
+:SoftwareFailureTempSensorXM rdf:type owl:NamedIndividual ,
+                                      :SoftwareFailure .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartAlarmXM
+:SoftwareRestartAlarmXM rdf:type owl:NamedIndividual ,
+                                 :SoftwareRestart .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartSmokeSensorXM
+:SoftwareRestartSmokeSensorXM rdf:type owl:NamedIndividual ,
+                                       :SoftwareRestart .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateSmartThingsHub
+:SoftwareUpdateSmartThingsHub rdf:type owl:NamedIndividual ,
+                                       :SoftwareUpdate .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateTempSensorXM
+:SoftwareUpdateTempSensorXM rdf:type owl:NamedIndividual ,
+                                     :SoftwareUpdate .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM
+:SpikeTempSensorXM rdf:type owl:NamedIndividual ,
+                            :FailureMode ,
+                            :Spike ;
+                   :happensAt :TempSensorXM ;
+                   :hasRecoveryAction :SoftwareUpdateTempSensorXM ;
+                   :isCausedBy :SoftwareFailureTempSensorXM ;
+                   :hasFailureCode "0x80000000" .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtMotionSensor
+:StuckAtMotionSensor rdf:type owl:NamedIndividual ,
+                              :FailureMode ,
+                              :StuckAt ;
+                     :happensAt :MotionSensorXM ;
+                     :hasRecoveryAction :HardwareRestartMotionSensorXM ;
+                     :isCausedBy :PowerFailureMotionSensorXM .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM
+:StuckAtSmokeSensorXM rdf:type owl:NamedIndividual ,
+                               :FailureMode ,
+                               :StuckAt ;
+                      :happensAt :SmokeSensorXM ;
+                      :hasRecoveryAction :SoftwareRestartSmokeSensorXM ;
+                      :isCausedBy :SoftwareFailureSmokeSensorXM ;
+                      :hasFailureCode "0x345" ;
+                      :MemoryUsage 1005 .
+
+
+###  http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM
+:TempSensorXM rdf:type owl:NamedIndividual ,
+                       :FeatureKind .
+
+
+[ owl:cardinality "1"^^xsd:nonNegativeInteger
+] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

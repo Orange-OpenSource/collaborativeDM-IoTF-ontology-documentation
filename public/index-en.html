@@ -1,0 +1,3905 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>IoT Failure ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://www.semanticweb.org/orangeinnovation/IoTF","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.semanticweb.org/orangeinnovation/IoTF","name":"IoT Failure ontology", "headline":"IoT-F reprensents failures of IoT systems.", "datePublished":"Tue Mar 05 14:18:03 CET 2024", "version":"0.0.1"}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>IoT Failure ontology</h1>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="http://www.semanticweb.org/orangeinnovation/IoTF">http://www.semanticweb.org/orangeinnovation/IoTF</a></dd>
+<dt>Revision:</dt>
+<dd>0.0.1</dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd> IoT Failure ontology. Revision: 0.0.1.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+IoT-F reprensents failures of IoT systems.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>[Ontology NS Prefix]</b></td><td>&lt;http://www.semanticweb.org/orangeinnovation/IoTF&gt;</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>error</b></td><td>&lt;http://org.semanticweb.owlapi/error&gt;</td></tr>
+<tr><td><b>core</b></td><td>&lt;https://saref.etsi.org/core&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
+<tr><td><b>saref4syst</b></td><td>&lt;https://saref.etsi.org/saref4syst&gt;</td></tr>
+<tr><td><b>NetworkI</b></td><td>&lt;http://www.semanticweb.org/orangeinnovation/IoTFNetworkI&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">IoT Failure ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#AudioOutputFault"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#AudioOutputFault">
+         <span>audio output fault</span>
+      </a>
+   </li>
+   <li>
+      <a href="#BLEFault"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#BLEFault">
+         <span>b l e fault</span>
+      </a>
+   </li>
+   <li>
+      <a href="#BatteryFluctuation"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#BatteryFluctuation">
+         <span>battery fluctuation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#BatteryLevel"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel">
+         <span>battery level</span>
+      </a>
+   </li>
+   <li>
+      <a href="#CPUUsage"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage">
+         <span>c p u usage</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Calibration"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#Calibration">
+         <span>calibration</span>
+      </a>
+   </li>
+   <li>
+      <a href="#CellularFault"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#CellularFault">
+         <span>cellular fault</span>
+      </a>
+   </li>
+   <li>
+      <a href="#CommunicationFailure"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure">
+         <span>communication failure</span>
+      </a>
+   </li>
+   <li>
+      <a href="#CompensatoryAction"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#CompensatoryAction">
+         <span>compensatory action</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ConnectivityFailure"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure">
+         <span>connectivity failure</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Device"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#Device">
+         <span>device</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/Device" title="https://saref.etsi.org/core/Device">Device</a>
+   </li>
+   <li>
+      <a href="#Environnment"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#Environnment">
+         <span>environnment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#EthernetFault"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#EthernetFault">
+         <span>ethernet fault</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FailStop"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#FailStop">
+         <span>fail stop</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FailureCause"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause">
+         <span>failure cause</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FailureEffect"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureEffect">
+         <span>failure effect</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FailureMode"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">
+         <span>failure mode</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FeatureKind"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind">
+         <span>feature kind</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/FeatureKind" title="https://saref.etsi.org/core/FeatureKind">Feature kinds</a>
+   </li>
+   <li>
+      <a href="#FirmwareUpdate"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate">
+         <span>firmware update</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FirmwareVersion"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareVersion">
+         <span>firmware version</span>
+      </a>
+   </li>
+   <li>
+      <a href="#HardwareFailure"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure">
+         <span>hardware failure</span>
+      </a>
+   </li>
+   <li>
+      <a href="#HardwareRestart"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart">
+         <span>hardware restart</span>
+      </a>
+   </li>
+   <li>
+      <a href="#HardwareVersion"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareVersion">
+         <span>hardware version</span>
+      </a>
+   </li>
+   <li>
+      <a href="#HighVariance"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance">
+         <span>high variance</span>
+      </a>
+   </li>
+   <li>
+      <a href="#LowBattery"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#LowBattery">
+         <span>low battery</span>
+      </a>
+   </li>
+   <li>
+      <a href="#MemoryUsage"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage">
+         <span>memory usage</span>
+      </a>
+   </li>
+   <li>
+      <a href="#NFCFault"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#NFCFault">
+         <span>n f c fault</span>
+      </a>
+   </li>
+   <li>
+      <a href="#NetworkI/O"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O">
+         <span>network i/ o</span>
+      </a>
+   </li>
+   <li>
+      <a href="#NonFailStop"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop">
+         <span>non fail stop</span>
+      </a>
+   </li>
+   <li>
+      <a href="#NonVolatileMemoryError"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#NonVolatileMemoryError">
+         <span>non volatile memory error</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Omission"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#Omission">
+         <span>omission</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Outlier"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#Outlier">
+         <span>outlier</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PowerFailure"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure">
+         <span>power failure</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PowerSource"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#PowerSource">
+         <span>power source</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PropertyValue"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue">
+         <span>property value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/PropertyValue" title="https://saref.etsi.org/core/PropertyValue">Property Value</a>
+   </li>
+   <li>
+      <a href="#RadioFault"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault">
+         <span>radio fault</span>
+      </a>
+   </li>
+   <li>
+      <a href="#RebootCount"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#RebootCount">
+         <span>reboot count</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SoftwareFailure"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure">
+         <span>software failure</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SoftwareRestart"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart">
+         <span>software restart</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SoftwareUpdate"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate">
+         <span>software update</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SoftwareVersion"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareVersion">
+         <span>software version</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Spike"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#Spike">
+         <span>spike</span>
+      </a>
+   </li>
+   <li>
+      <a href="#StuckAt"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt">
+         <span>stuck at</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Temperature"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#Temperature">
+         <span>temperature</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ThreadFault"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#ThreadFault">
+         <span>thread fault</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Timing"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#Timing">
+         <span>timing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TotalOperationalTime"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#TotalOperationalTime">
+         <span>total operational time</span>
+      </a>
+   </li>
+   <li>
+      <a href="#UpTime"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#UpTime">
+         <span>up time</span>
+      </a>
+   </li>
+   <li>
+      <a href="#UserInterfaceFault"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#UserInterfaceFault">
+         <span>user interface fault</span>
+      </a>
+   </li>
+   <li>
+      <a href="#VisualDisplayFault"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#VisualDisplayFault">
+         <span>visual display fault</span>
+      </a>
+   </li>
+   <li>
+      <a href="#WIFIFault"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#WIFIFault">
+         <span>w i f i fault</span>
+      </a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#becauseOf"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#becauseOf">
+         <span>because of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#effectIs"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#effectIs">
+         <span>effect is</span>
+      </a>
+   </li>
+   <li>
+      <a href="#happensAt"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#happensAt">
+         <span>happens at</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/hasDeviceKind" title="https://saref.etsi.org/core/hasDeviceKind">has device kind</a>
+   </li>
+   <li>
+      <a href="#hasDeviceType"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#hasDeviceType">
+         <span>has device type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/hasPropertyValue" title="https://saref.etsi.org/core/hasPropertyValue">has property value</a>
+   </li>
+   <li>
+      <a href="#hasRecoveryAction"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction">
+         <span>has recovery action</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasSymptom"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#hasSymptom">
+         <span>has symptom</span>
+      </a>
+   </li>
+   <li>
+      <a href="#isCausedBy"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy">
+         <span>is caused by</span>
+      </a>
+   </li>
+   <li>
+      <a href="#producesEffect"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#producesEffect">
+         <span>produces effect</span>
+      </a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#hasFailureCode"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode">
+         <span>has failure code</span>
+      </a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#BatteryLevel"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel">
+         <span>battery level</span>
+      </a>
+   </li>
+   <li>
+      <a href="#CPUUsage"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage">
+         <span>c p u usage</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#cardinality" title="http://www.w3.org/2002/07/owl#cardinality">
+         <span>cardinality</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/example" title="http://purl.org/vocab/vann/example">
+         <span>example</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#example" title="http://www.w3.org/2004/02/skos/core#example">
+         <span>example</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#historyNote" title="http://www.w3.org/2004/02/skos/core#historyNote">
+         <span>history note</span>
+      </a>
+   </li>
+   <li>
+      <a href="#MemoryUsage"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage">
+         <span>memory usage</span>
+      </a>
+   </li>
+   <li>
+      <a href="#NetworkI/O"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O">
+         <span>network i/ o</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred namespace uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#versionIRI" title="http://www.w3.org/2002/07/owl#versionIRI">
+         <span>version i r i</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#AlarmXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#AlarmXM">
+         <span>alarm x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ConnectivityFailureMotionSensorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailureMotionSensorXM">
+         <span>connectivity failure motion sensor x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ConnectivityMotionSensorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityMotionSensorXM">
+         <span>connectivity motion sensor x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FailureSmartThingsHub"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureSmartThingsHub">
+         <span>failure smart things hub</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FirmwareFailureLeakDetectionXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareFailureLeakDetectionXM">
+         <span>firmware failure leak detection x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FirmwareUpdateLeakDetectionXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLeakDetectionXM">
+         <span>firmware update leak detection x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FirmwareUpdateLightBulbXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLightBulbXM">
+         <span>firmware update light bulb x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#HardwareFailureTempSensorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailureTempSensorXM">
+         <span>hardware failure temp sensor x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#HardwareRestartMotionSensorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartMotionSensorXM">
+         <span>hardware restart motion sensor x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#HardwareRestartSmokeSensorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartSmokeSensorXM">
+         <span>hardware restart smoke sensor x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#HardwareRestartTempSensorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartTempSensorXM">
+         <span>hardware restart temp sensor x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#HighVarianceAlarmXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceAlarmXM">
+         <span>high variance alarm x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#HighVarianceLeakDetectorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM">
+         <span>high variance leak detector x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#HighVarianceLighBulbXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLighBulbXM">
+         <span>high variance ligh bulb x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#HighVarianceSmokeSensorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM">
+         <span>high variance smoke sensor x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#HighVarianceTempSensorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM">
+         <span>high variance temp sensor x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#LeakDetectorMX"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#LeakDetectorMX">
+         <span>leak detector m x</span>
+      </a>
+   </li>
+   <li>
+      <a href="#LightBulbXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#LightBulbXM">
+         <span>light bulb x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#MotionSensorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#MotionSensorXM">
+         <span>motion sensor x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PowerFailureMotionSensorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailureMotionSensorXM">
+         <span>power failure motion sensor x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SmartThingsHub"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#SmartThingsHub">
+         <span>smart things hub</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SmokeSensorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM">
+         <span>smoke sensor x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SoftwareFailureSmartThingsHub"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmartThingsHub">
+         <span>software failure smart things hub</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SoftwareFailureSmokeSensorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmokeSensorXM">
+         <span>software failure smoke sensor x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SoftwareFailureTempSensorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureTempSensorXM">
+         <span>software failure temp sensor x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SoftwareRestartAlarmXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartAlarmXM">
+         <span>software restart alarm x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SoftwareRestartSmokeSensorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartSmokeSensorXM">
+         <span>software restart smoke sensor x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SoftwareUpdateSmartThingsHub"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateSmartThingsHub">
+         <span>software update smart things hub</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SoftwareUpdateTempSensorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateTempSensorXM">
+         <span>software update temp sensor x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SpikeTempSensorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM">
+         <span>spike temp sensor x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#StuckAtMotionSensor"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtMotionSensor">
+         <span>stuck at motion sensor</span>
+      </a>
+   </li>
+   <li>
+      <a href="#StuckAtSmokeSensorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM">
+         <span>stuck at smoke sensor x m</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TempSensorXM"
+         title="http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM">
+         <span>temp sensor x m</span>
+      </a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">IoT Failure ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for IoT Failure ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by IoT Failure ontology.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#AudioOutputFault"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#AudioOutputFault">
+            <span>audio output fault</span>
+         </a>
+      </li>
+      <li>
+         <a href="#BLEFault"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#BLEFault">
+            <span>b l e fault</span>
+         </a>
+      </li>
+      <li>
+         <a href="#BatteryFluctuation"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#BatteryFluctuation">
+            <span>battery fluctuation</span>
+         </a>
+      </li>
+      <li>
+         <a href="#BatteryLevel"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel">
+            <span>battery level</span>
+         </a>
+      </li>
+      <li>
+         <a href="#CPUUsage"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage">
+            <span>c p u usage</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Calibration"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#Calibration">
+            <span>calibration</span>
+         </a>
+      </li>
+      <li>
+         <a href="#CellularFault"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#CellularFault">
+            <span>cellular fault</span>
+         </a>
+      </li>
+      <li>
+         <a href="#CommunicationFailure"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure">
+            <span>communication failure</span>
+         </a>
+      </li>
+      <li>
+         <a href="#CompensatoryAction"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#CompensatoryAction">
+            <span>compensatory action</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ConnectivityFailure"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure">
+            <span>connectivity failure</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Device"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#Device">
+            <span>device</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://saref.etsi.org/core/Device" title="https://saref.etsi.org/core/Device">Device</a>
+      </li>
+      <li>
+         <a href="#Environnment"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#Environnment">
+            <span>environnment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#EthernetFault"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#EthernetFault">
+            <span>ethernet fault</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FailStop"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#FailStop">
+            <span>fail stop</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FailureCause"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause">
+            <span>failure cause</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FailureEffect"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureEffect">
+            <span>failure effect</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FailureMode"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">
+            <span>failure mode</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FeatureKind"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind">
+            <span>feature kind</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://saref.etsi.org/core/FeatureKind" title="https://saref.etsi.org/core/FeatureKind">Feature kinds</a>
+      </li>
+      <li>
+         <a href="#FirmwareUpdate"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate">
+            <span>firmware update</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FirmwareVersion"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareVersion">
+            <span>firmware version</span>
+         </a>
+      </li>
+      <li>
+         <a href="#HardwareFailure"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure">
+            <span>hardware failure</span>
+         </a>
+      </li>
+      <li>
+         <a href="#HardwareRestart"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart">
+            <span>hardware restart</span>
+         </a>
+      </li>
+      <li>
+         <a href="#HardwareVersion"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareVersion">
+            <span>hardware version</span>
+         </a>
+      </li>
+      <li>
+         <a href="#HighVariance"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance">
+            <span>high variance</span>
+         </a>
+      </li>
+      <li>
+         <a href="#LowBattery"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#LowBattery">
+            <span>low battery</span>
+         </a>
+      </li>
+      <li>
+         <a href="#MemoryUsage"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage">
+            <span>memory usage</span>
+         </a>
+      </li>
+      <li>
+         <a href="#NFCFault"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#NFCFault">
+            <span>n f c fault</span>
+         </a>
+      </li>
+      <li>
+         <a href="#NetworkI/O"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O">
+            <span>network i/ o</span>
+         </a>
+      </li>
+      <li>
+         <a href="#NonFailStop"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop">
+            <span>non fail stop</span>
+         </a>
+      </li>
+      <li>
+         <a href="#NonVolatileMemoryError"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#NonVolatileMemoryError">
+            <span>non volatile memory error</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Omission"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#Omission">
+            <span>omission</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Outlier"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#Outlier">
+            <span>outlier</span>
+         </a>
+      </li>
+      <li>
+         <a href="#PowerFailure"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure">
+            <span>power failure</span>
+         </a>
+      </li>
+      <li>
+         <a href="#PowerSource"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#PowerSource">
+            <span>power source</span>
+         </a>
+      </li>
+      <li>
+         <a href="#PropertyValue"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue">
+            <span>property value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://saref.etsi.org/core/PropertyValue" title="https://saref.etsi.org/core/PropertyValue">Property Value</a>
+      </li>
+      <li>
+         <a href="#RadioFault"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault">
+            <span>radio fault</span>
+         </a>
+      </li>
+      <li>
+         <a href="#RebootCount"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#RebootCount">
+            <span>reboot count</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SoftwareFailure"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure">
+            <span>software failure</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SoftwareRestart"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart">
+            <span>software restart</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SoftwareUpdate"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate">
+            <span>software update</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SoftwareVersion"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareVersion">
+            <span>software version</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Spike"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#Spike">
+            <span>spike</span>
+         </a>
+      </li>
+      <li>
+         <a href="#StuckAt"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt">
+            <span>stuck at</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Temperature"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#Temperature">
+            <span>temperature</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ThreadFault"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#ThreadFault">
+            <span>thread fault</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Timing"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#Timing">
+            <span>timing</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TotalOperationalTime"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#TotalOperationalTime">
+            <span>total operational time</span>
+         </a>
+      </li>
+      <li>
+         <a href="#UpTime"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#UpTime">
+            <span>up time</span>
+         </a>
+      </li>
+      <li>
+         <a href="#UserInterfaceFault"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#UserInterfaceFault">
+            <span>user interface fault</span>
+         </a>
+      </li>
+      <li>
+         <a href="#VisualDisplayFault"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#VisualDisplayFault">
+            <span>visual display fault</span>
+         </a>
+      </li>
+      <li>
+         <a href="#WIFIFault"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#WIFIFault">
+            <span>w i f i fault</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="AudioOutputFault">
+      <h3>audio output fault<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#AudioOutputFault</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#HardwareFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure">hardware failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="BLEFault">
+      <h3>b l e fault<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#BLEFault</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#RadioFault"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault">radio fault</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="BatteryFluctuation">
+      <h3>battery fluctuation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#BatteryFluctuation</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PowerFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure">power failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="BatteryLevel">
+      <h3>battery level<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PropertyValue"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue">property value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is also defined as</dt>
+         <dd>annotation property</dd>
+      </dl>
+   </div>
+   <div class="entity" id="CPUUsage">
+      <h3>c p u usage<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PropertyValue"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue">property value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is also defined as</dt>
+         <dd>annotation property</dd>
+      </dl>
+   </div>
+   <div class="entity" id="Calibration">
+      <h3>calibration<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#Calibration</p>
+      <div class="comment">
+         <span class="markdown">happens when sensor data may have offset or have a different gain from the ground truth values.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#NonFailStop"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop">non fail stop</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CellularFault">
+      <h3>cellular fault<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#CellularFault</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#RadioFault"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault">radio fault</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CommunicationFailure">
+      <h3>communication failure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#FailureMode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Omission"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#Omission">omission</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Timing"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#Timing">timing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CompensatoryAction">
+      <h3>compensatory action<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#CompensatoryAction</p>
+      <div class="comment">
+         <span class="markdown">denotes actions that allows recovering a device from a given failure.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#FirmwareUpdate"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate">firmware update</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#HardwareRestart"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart">hardware restart</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SoftwareRestart"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart">software restart</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SoftwareUpdate"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate">software update</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasRecoveryAction"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction">has recovery action</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ConnectivityFailure">
+      <h3>connectivity failure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure</p>
+      <div class="comment">
+         <span class="markdown">represents failure cause related to the connectivity.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#FailureCause"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause">failure cause</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#ConnectivityFailureMotionSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailureMotionSensorXM">connectivity failure motion sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Device">
+      <h3>device<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#Device</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#https://saref.etsi.org/core/Device" title="https://saref.etsi.org/core/Device">Device</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://saref.etsi.org/core/hasDeviceKind" title="https://saref.etsi.org/core/hasDeviceKind">has device kind</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://saref.etsi.org/core/hasPropertyValue" title="https://saref.etsi.org/core/hasPropertyValue">has property value</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://saref.etsi.org/core/Device">
+      <h3>Device<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://saref.etsi.org/core/Device</p>
+      <div class="comment">
+         <span class="markdown">A tangible object designed to accomplish a particular task. In order to accomplish this task, the device performs one or more functions. An instance of saref:Device represents one specific real world entity.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>Examples of devices are a light switch, a temperature sensor, an energy meter, a water flow meter, and a laundry dryer. A laundry dryer is designed to dry laundry, and to accomplish this task it has a start/stop function.</pre>
+         </dd>
+         <dd>
+            <pre>For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function.</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://saref.etsi.org/core/FeatureOfInterest"
+               target="_blank"
+               title="https://saref.etsi.org/core/FeatureOfInterest">feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="https://saref.etsi.org/saref4syst/System"
+               target="_blank"
+               title="https://saref.etsi.org/saref4syst/System">system</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Environnment">
+      <h3>environnment<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#Environnment</p>
+      <div class="comment">
+         <span class="markdown">represents failure cause related to the environment.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#FailureCause"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause">failure cause</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EthernetFault">
+      <h3>ethernet fault<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#EthernetFault</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#RadioFault"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault">radio fault</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FailStop">
+      <h3>fail stop<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#FailStop</p>
+      <div class="comment">
+         <span class="markdown">happens when a device stops functioning and is un-responsive to external requests.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#FailureMode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FailureCause">
+      <h3>failure cause<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause</p>
+      <div class="comment">
+         <span class="markdown">denotes the cause of a failure.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ConnectivityFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure">connectivity failure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Environnment"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#Environnment">environnment</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#HardwareFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure">hardware failure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PowerFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure">power failure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SoftwareFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure">software failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isCausedBy"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy">is caused by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FailureEffect">
+      <h3>failure effect<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#FailureEffect</p>
+      <div class="comment">
+         <span class="markdown">represents the effects of a failure mode.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#producesEffect"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#producesEffect">produces effect</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FailureMode">
+      <h3>failure mode<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode</p>
+      <div class="comment">
+         <span class="markdown">a form of a dysfunction related to an IoTdevice.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#CommunicationFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure">communication failure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FailStop"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailStop">fail stop</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#NonFailStop"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop">non fail stop</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#becauseOf"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#becauseOf">because of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#effectIs"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#effectIs">effect is</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#happensAt"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#happensAt">happens at</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasFailureCode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode">has failure code</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRecoveryAction"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction">has recovery action</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSymptom"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasSymptom">has symptom</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isCausedBy"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy">is caused by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#producesEffect"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#producesEffect">produces effect</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#becauseOf"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#becauseOf">because of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#effectIs"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#effectIs">effect is</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#ConnectivityMotionSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityMotionSensorXM">connectivity motion sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#FailureSmartThingsHub"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureSmartThingsHub">failure smart things hub</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#HighVarianceAlarmXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceAlarmXM">high variance alarm x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#HighVarianceLeakDetectorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM">high variance leak detector x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#HighVarianceLighBulbXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLighBulbXM">high variance ligh bulb x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#HighVarianceSmokeSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM">high variance smoke sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#HighVarianceTempSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM">high variance temp sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#SpikeTempSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM">spike temp sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#StuckAtMotionSensor"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtMotionSensor">stuck at motion sensor</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#StuckAtSmokeSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM">stuck at smoke sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FeatureKind">
+      <h3>feature kind<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind</p>
+      <div class="comment">
+         <span class="markdown">denotes a type of a market IoT device e.g., FIBARO light bulb.</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#https://saref.etsi.org/core/FeatureKind" title="https://saref.etsi.org/core/FeatureKind">Feature kinds</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#happensAt"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#happensAt">happens at</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasDeviceType"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasDeviceType">has device type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#AlarmXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#AlarmXM">alarm x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#LeakDetectorMX"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#LeakDetectorMX">leak detector m x</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#LightBulbXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#LightBulbXM">light bulb x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#MotionSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#MotionSensorXM">motion sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#SmartThingsHub"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SmartThingsHub">smart things hub</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#SmokeSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM">smoke sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#TempSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM">temp sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://saref.etsi.org/core/FeatureKind">
+      <h3>Feature kinds<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://saref.etsi.org/core/FeatureKind</p>
+      <div class="comment">
+         <span class="markdown">Feature kinds allow to describe kinds of features of interest, with common properties having the same value, and common states being the same. An instance of saref:FeatureKind represents an archetype of real world entities, for example to populate product catalogs.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://saref.etsi.org/core/hasDeviceKind" title="https://saref.etsi.org/core/hasDeviceKind">has device kind</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FirmwareUpdate">
+      <h3>firmware update<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#CompensatoryAction"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#CompensatoryAction">compensatory action</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#FirmwareUpdateLeakDetectionXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLeakDetectionXM">firmware update leak detection x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#FirmwareUpdateLightBulbXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLightBulbXM">firmware update light bulb x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FirmwareVersion">
+      <h3>firmware version<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareVersion</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PropertyValue"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue">property value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HardwareFailure">
+      <h3>hardware failure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure</p>
+      <div class="comment">
+         <span class="markdown">represents failure cause related to the hardware.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#FailureCause"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause">failure cause</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AudioOutputFault"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#AudioOutputFault">audio output fault</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#NonVolatileMemoryError"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#NonVolatileMemoryError">non volatile memory error</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PowerSource"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#PowerSource">power source</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#RadioFault"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault">radio fault</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#UserInterfaceFault"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#UserInterfaceFault">user interface fault</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#VisualDisplayFault"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#VisualDisplayFault">visual display fault</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#HardwareFailureTempSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailureTempSensorXM">hardware failure temp sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HardwareRestart">
+      <h3>hardware restart<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#CompensatoryAction"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#CompensatoryAction">compensatory action</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#HardwareRestartMotionSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartMotionSensorXM">hardware restart motion sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#HardwareRestartSmokeSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartSmokeSensorXM">hardware restart smoke sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#HardwareRestartTempSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartTempSensorXM">hardware restart temp sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HardwareVersion">
+      <h3>hardware version<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#HardwareVersion</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PropertyValue"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue">property value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HighVariance">
+      <h3>high variance<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance</p>
+      <div class="comment">
+         <span class="markdown">A high variance failure appears when a device’s state fluctuates back and forth more rapidly than the environment dictates.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#NonFailStop"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop">non fail stop</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#HighVarianceAlarmXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceAlarmXM">high variance alarm x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#HighVarianceLeakDetectorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM">high variance leak detector x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#HighVarianceLighBulbXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLighBulbXM">high variance ligh bulb x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#HighVarianceSmokeSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM">high variance smoke sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#HighVarianceTempSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM">high variance temp sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LowBattery">
+      <h3>low battery<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#LowBattery</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PowerFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure">power failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MemoryUsage">
+      <h3>memory usage<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PropertyValue"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue">property value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is also defined as</dt>
+         <dd>annotation property</dd>
+      </dl>
+   </div>
+   <div class="entity" id="NFCFault">
+      <h3>n f c fault<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#NFCFault</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#RadioFault"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault">radio fault</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NetworkI/O">
+      <h3>network i/ o<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PropertyValue"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue">property value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is also defined as</dt>
+         <dd>annotation property</dd>
+      </dl>
+   </div>
+   <div class="entity" id="NonFailStop">
+      <h3>non fail stop<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop</p>
+      <div class="comment">
+         <span class="markdown">failure relate to a response by the device that diverges from the desired device state.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#FailureMode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Calibration"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#Calibration">calibration</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#HighVariance"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance">high variance</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Outlier"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#Outlier">outlier</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Spike"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#Spike">spike</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#StuckAt"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt">stuck at</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NonVolatileMemoryError">
+      <h3>non volatile memory error<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#NonVolatileMemoryError</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#HardwareFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure">hardware failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Omission">
+      <h3>omission<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#Omission</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#CommunicationFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure">communication failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Outlier">
+      <h3>outlier<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#Outlier</p>
+      <div class="comment">
+         <span class="markdown">an outlier failure occurs when a device to report an incorrect state for a very brief period, usually theduration of just 1 poll.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#NonFailStop"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop">non fail stop</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PowerFailure">
+      <h3>power failure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure</p>
+      <div class="comment">
+         <span class="markdown">reprensents failure cause related to power e.g, battery level.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#FailureCause"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause">failure cause</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#BatteryFluctuation"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#BatteryFluctuation">battery fluctuation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#LowBattery"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#LowBattery">low battery</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#PowerFailureMotionSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailureMotionSensorXM">power failure motion sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PowerSource">
+      <h3>power source<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#PowerSource</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#HardwareFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure">hardware failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PropertyValue">
+      <h3>property value<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#https://saref.etsi.org/core/PropertyValue" title="https://saref.etsi.org/core/PropertyValue">Property Value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#BatteryLevel"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel">battery level</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CPUUsage"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage">c p u usage</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FirmwareVersion"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareVersion">firmware version</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#HardwareVersion"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareVersion">hardware version</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#MemoryUsage"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage">memory usage</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#NetworkI/O"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O">network i/ o</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#RebootCount"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#RebootCount">reboot count</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SoftwareVersion"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareVersion">software version</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Temperature"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#Temperature">temperature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TotalOperationalTime"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#TotalOperationalTime">total operational time</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#UpTime"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#UpTime">up time</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasSymptom"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasSymptom">has symptom</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://saref.etsi.org/core/PropertyValue">
+      <h3>Property Value<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://saref.etsi.org/core/PropertyValue</p>
+      <div class="comment">
+         <span class="markdown">Describes the value for a property. The property value is linked to its value expressed as an RDF literal (DP saref:hasValue), optionally to the unit of measurement (OP saref:isMeasuredIn), and optionally to the properties or properties of interest it is a value of (OP saref:isValueOfProperty).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://org.semanticweb.owlapi/error#Error1"
+               target="_blank"
+               title="http://org.semanticweb.owlapi/error#Error1">error1</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://saref.etsi.org/core/hasPropertyValue" title="https://saref.etsi.org/core/hasPropertyValue">has property value</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RadioFault">
+      <h3>radio fault<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#HardwareFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure">hardware failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#BLEFault"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#BLEFault">b l e fault</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CellularFault"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#CellularFault">cellular fault</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#EthernetFault"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#EthernetFault">ethernet fault</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#NFCFault"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#NFCFault">n f c fault</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ThreadFault"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#ThreadFault">thread fault</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WIFIFault"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#WIFIFault">w i f i fault</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RebootCount">
+      <h3>reboot count<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#RebootCount</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PropertyValue"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue">property value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SoftwareFailure">
+      <h3>software failure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure</p>
+      <div class="comment">
+         <span class="markdown">represents failure cause related to software.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#FailureCause"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause">failure cause</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#FirmwareFailureLeakDetectionXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareFailureLeakDetectionXM">firmware failure leak detection x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#SoftwareFailureSmartThingsHub"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmartThingsHub">software failure smart things hub</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#SoftwareFailureSmokeSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmokeSensorXM">software failure smoke sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#SoftwareFailureTempSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureTempSensorXM">software failure temp sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SoftwareRestart">
+      <h3>software restart<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#CompensatoryAction"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#CompensatoryAction">compensatory action</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#SoftwareRestartAlarmXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartAlarmXM">software restart alarm x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#SoftwareRestartSmokeSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartSmokeSensorXM">software restart smoke sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SoftwareUpdate">
+      <h3>software update<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#CompensatoryAction"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#CompensatoryAction">compensatory action</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#SoftwareUpdateSmartThingsHub"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateSmartThingsHub">software update smart things hub</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#SoftwareUpdateTempSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateTempSensorXM">software update temp sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SoftwareVersion">
+      <h3>software version<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareVersion</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PropertyValue"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue">property value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Spike">
+      <h3>spike<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#Spike</p>
+      <div class="comment">
+         <span class="markdown">A spike fault happens when there is a rapid increase or decrease in the device state.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#NonFailStop"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop">non fail stop</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#SpikeTempSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM">spike temp sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StuckAt">
+      <h3>stuck at<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt</p>
+      <div class="comment">
+         <span class="markdown">A stuck-at failure happens when a device cannot change state, maintaining the same state despite changes in environment or actuation commands.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#NonFailStop"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop">non fail stop</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#StuckAtMotionSensor"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtMotionSensor">stuck at motion sensor</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#StuckAtSmokeSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM">stuck at smoke sensor x m</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Temperature">
+      <h3>temperature<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#Temperature</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PropertyValue"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue">property value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ThreadFault">
+      <h3>thread fault<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#ThreadFault</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#RadioFault"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault">radio fault</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Timing">
+      <h3>timing<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#Timing</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#CommunicationFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure">communication failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TotalOperationalTime">
+      <h3>total operational time<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#TotalOperationalTime</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PropertyValue"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue">property value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="UpTime">
+      <h3>up time<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#UpTime</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PropertyValue"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue">property value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="UserInterfaceFault">
+      <h3>user interface fault<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#UserInterfaceFault</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#HardwareFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure">hardware failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VisualDisplayFault">
+      <h3>visual display fault<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#VisualDisplayFault</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#HardwareFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure">hardware failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="WIFIFault">
+      <h3>w i f i fault<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#WIFIFault</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#RadioFault"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault">radio fault</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#becauseOf"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#becauseOf">
+            <span>because of</span>
+         </a>
+      </li>
+      <li>
+         <a href="#effectIs"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#effectIs">
+            <span>effect is</span>
+         </a>
+      </li>
+      <li>
+         <a href="#happensAt"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#happensAt">
+            <span>happens at</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://saref.etsi.org/core/hasDeviceKind" title="https://saref.etsi.org/core/hasDeviceKind">has device kind</a>
+      </li>
+      <li>
+         <a href="#hasDeviceType"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#hasDeviceType">
+            <span>has device type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://saref.etsi.org/core/hasPropertyValue" title="https://saref.etsi.org/core/hasPropertyValue">has property value</a>
+      </li>
+      <li>
+         <a href="#hasRecoveryAction"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction">
+            <span>has recovery action</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasSymptom"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#hasSymptom">
+            <span>has symptom</span>
+         </a>
+      </li>
+      <li>
+         <a href="#isCausedBy"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy">
+            <span>is caused by</span>
+         </a>
+      </li>
+      <li>
+         <a href="#producesEffect"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#producesEffect">
+            <span>produces effect</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="becauseOf">
+      <h3>because of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#becauseOf</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FailureMode"
+                  title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FailureMode"
+                  title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="effectIs">
+      <h3>effect is<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#effectIs</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FailureMode"
+                  title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FailureMode"
+                  title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="happensAt">
+      <h3>happens at<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#happensAt</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FailureMode"
+                  title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FeatureKind"
+                  title="http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind">feature kind</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://saref.etsi.org/core/hasDeviceKind">
+      <h3>has device kind<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://saref.etsi.org/core/hasDeviceKind</p>
+      <div class="comment">
+         <span class="markdown">Links a device to its kind, a feature kind. Kinds of devices describe models of devices, with common properties having the same value, common states being the same, common functions, and common services.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="https://saref.etsi.org/core/hasFeatureKind"
+                  target="_blank"
+                  title="https://saref.etsi.org/core/hasFeatureKind">has feature kind</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Device"
+                  title="http://www.semanticweb.org/orangeinnovation/IoTF#Device">device</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://saref.etsi.org/core/FeatureKind" title="https://saref.etsi.org/core/FeatureKind">Feature kinds</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDeviceType">
+      <h3>has device type<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#hasDeviceType</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FeatureKind"
+                  title="http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind">feature kind</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://saref.etsi.org/core/hasPropertyValue">
+      <h3>has property value<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://saref.etsi.org/core/hasPropertyValue</p>
+      <div class="comment">
+         <span class="markdown">Links a feature kind, a feature of interest, or a property of interest, to a property value.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Device"
+                  title="http://www.semanticweb.org/orangeinnovation/IoTF#Device">device</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://saref.etsi.org/core/PropertyValue" title="https://saref.etsi.org/core/PropertyValue">Property Value</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has sub-property chains</dt>
+            <dd>
+               <a href="http://www.w3.org/2004/02/skos/core#broader"
+                  target="_blank"
+                  title="http://www.w3.org/2004/02/skos/core#broader">broader</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="#https://saref.etsi.org/core/hasPropertyValue" title="https://saref.etsi.org/core/hasPropertyValue">has property value</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRecoveryAction">
+      <h3>has recovery action<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FailureMode"
+                  title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#CompensatoryAction"
+                  title="http://www.semanticweb.org/orangeinnovation/IoTF#CompensatoryAction">compensatory action</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSymptom">
+      <h3>has symptom<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#hasSymptom</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FailureMode"
+                  title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#PropertyValue"
+                  title="http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue">property value</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isCausedBy">
+      <h3>is caused by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FailureMode"
+                  title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FailureCause"
+                  title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause">failure cause</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="producesEffect">
+      <h3>produces effect<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#producesEffect</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FailureMode"
+                  title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FailureEffect"
+                  title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureEffect">failure effect</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasFailureCode"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode">
+            <span>has failure code</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="hasFailureCode">
+      <h3>has failure code<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FailureMode"
+                  title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="annotationproperties">
+   <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#BatteryLevel"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel">
+            <span>battery level</span>
+         </a>
+      </li>
+      <li>
+         <a href="#CPUUsage"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage">
+            <span>c p u usage</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2002/07/owl#cardinality" title="http://www.w3.org/2002/07/owl#cardinality">
+            <span>cardinality</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+            <span>description</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/vocab/vann/example" title="http://purl.org/vocab/vann/example">
+            <span>example</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2004/02/skos/core#example" title="http://www.w3.org/2004/02/skos/core#example">
+            <span>example</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2004/02/skos/core#historyNote" title="http://www.w3.org/2004/02/skos/core#historyNote">
+            <span>history note</span>
+         </a>
+      </li>
+      <li>
+         <a href="#MemoryUsage"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage">
+            <span>memory usage</span>
+         </a>
+      </li>
+      <li>
+         <a href="#NetworkI/O"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O">
+            <span>network i/ o</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+            <span>preferred namespace uri</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+            <span>title</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2002/07/owl#versionIRI" title="http://www.w3.org/2002/07/owl#versionIRI">
+            <span>version i r i</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="BatteryLevel">
+      <h3>battery level<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel</p>
+      <div class="description">
+         <dl>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#BatteryLevel">class</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="CPUUsage">
+      <h3>c p u usage<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage</p>
+      <div class="description">
+         <dl>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#CPUUsage">class</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/2002/07/owl#cardinality">
+      <h3>cardinality<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2002/07/owl#cardinality</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/description">
+      <h3>description<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+   </div>
+   <div class="entity" id="http://purl.org/vocab/vann/example">
+      <h3>example<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/vocab/vann/example</p>
+   </div>
+   <div class="entity" id="http://www.w3.org/2004/02/skos/core#example">
+      <h3>example<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#example</p>
+   </div>
+   <div class="entity" id="http://www.w3.org/2004/02/skos/core#historyNote">
+      <h3>history note<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#historyNote</p>
+   </div>
+   <div class="entity" id="MemoryUsage">
+      <h3>memory usage<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage</p>
+      <div class="description">
+         <dl>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#MemoryUsage">class</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="NetworkI/O">
+      <h3>network i/ o<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O</p>
+      <div class="description">
+         <dl>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#NetworkI/O">class</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
+      <h3>preferred namespace uri<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/title">
+      <h3>title<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+   </div>
+   <div class="entity" id="http://www.w3.org/2002/07/owl#versionIRI">
+      <h3>version i r i<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2002/07/owl#versionIRI</p>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#AlarmXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#AlarmXM">
+            <span>alarm x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ConnectivityFailureMotionSensorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailureMotionSensorXM">
+            <span>connectivity failure motion sensor x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ConnectivityMotionSensorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityMotionSensorXM">
+            <span>connectivity motion sensor x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FailureSmartThingsHub"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureSmartThingsHub">
+            <span>failure smart things hub</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FirmwareFailureLeakDetectionXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareFailureLeakDetectionXM">
+            <span>firmware failure leak detection x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FirmwareUpdateLeakDetectionXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLeakDetectionXM">
+            <span>firmware update leak detection x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FirmwareUpdateLightBulbXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLightBulbXM">
+            <span>firmware update light bulb x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#HardwareFailureTempSensorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailureTempSensorXM">
+            <span>hardware failure temp sensor x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#HardwareRestartMotionSensorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartMotionSensorXM">
+            <span>hardware restart motion sensor x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#HardwareRestartSmokeSensorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartSmokeSensorXM">
+            <span>hardware restart smoke sensor x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#HardwareRestartTempSensorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartTempSensorXM">
+            <span>hardware restart temp sensor x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#HighVarianceAlarmXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceAlarmXM">
+            <span>high variance alarm x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#HighVarianceLeakDetectorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM">
+            <span>high variance leak detector x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#HighVarianceLighBulbXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLighBulbXM">
+            <span>high variance ligh bulb x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#HighVarianceSmokeSensorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM">
+            <span>high variance smoke sensor x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#HighVarianceTempSensorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM">
+            <span>high variance temp sensor x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#LeakDetectorMX"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#LeakDetectorMX">
+            <span>leak detector m x</span>
+         </a>
+      </li>
+      <li>
+         <a href="#LightBulbXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#LightBulbXM">
+            <span>light bulb x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#MotionSensorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#MotionSensorXM">
+            <span>motion sensor x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#PowerFailureMotionSensorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailureMotionSensorXM">
+            <span>power failure motion sensor x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SmartThingsHub"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#SmartThingsHub">
+            <span>smart things hub</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SmokeSensorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM">
+            <span>smoke sensor x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SoftwareFailureSmartThingsHub"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmartThingsHub">
+            <span>software failure smart things hub</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SoftwareFailureSmokeSensorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmokeSensorXM">
+            <span>software failure smoke sensor x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SoftwareFailureTempSensorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureTempSensorXM">
+            <span>software failure temp sensor x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SoftwareRestartAlarmXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartAlarmXM">
+            <span>software restart alarm x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SoftwareRestartSmokeSensorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartSmokeSensorXM">
+            <span>software restart smoke sensor x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SoftwareUpdateSmartThingsHub"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateSmartThingsHub">
+            <span>software update smart things hub</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SoftwareUpdateTempSensorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateTempSensorXM">
+            <span>software update temp sensor x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SpikeTempSensorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM">
+            <span>spike temp sensor x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#StuckAtMotionSensor"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtMotionSensor">
+            <span>stuck at motion sensor</span>
+         </a>
+      </li>
+      <li>
+         <a href="#StuckAtSmokeSensorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM">
+            <span>stuck at smoke sensor x m</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TempSensorXM"
+            title="http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM">
+            <span>temp sensor x m</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="AlarmXM">
+      <h3>alarm x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#AlarmXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FeatureKind"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind">feature kind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ConnectivityFailureMotionSensorXM">
+      <h3>connectivity failure motion sensor x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailureMotionSensorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#ConnectivityFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure">connectivity failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ConnectivityMotionSensorXM">
+      <h3>connectivity motion sensor x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityMotionSensorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FailureMode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#isCausedBy"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy">is caused by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#ConnectivityFailureMotionSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailureMotionSensorXM">connectivity failure motion sensor x m</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FailureSmartThingsHub">
+      <h3>failure smart things hub<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#FailureSmartThingsHub</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FailureMode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#isCausedBy"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy">is caused by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#SoftwareFailureSmartThingsHub"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmartThingsHub">software failure smart things hub</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FirmwareFailureLeakDetectionXM">
+      <h3>firmware failure leak detection x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareFailureLeakDetectionXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SoftwareFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure">software failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FirmwareUpdateLeakDetectionXM">
+      <h3>firmware update leak detection x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLeakDetectionXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FirmwareUpdate"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate">firmware update</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FirmwareUpdateLightBulbXM">
+      <h3>firmware update light bulb x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLightBulbXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FirmwareUpdate"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate">firmware update</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HardwareFailureTempSensorXM">
+      <h3>hardware failure temp sensor x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailureTempSensorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#HardwareFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure">hardware failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HardwareRestartMotionSensorXM">
+      <h3>hardware restart motion sensor x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartMotionSensorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#HardwareRestart"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart">hardware restart</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HardwareRestartSmokeSensorXM">
+      <h3>hardware restart smoke sensor x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartSmokeSensorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#HardwareRestart"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart">hardware restart</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HardwareRestartTempSensorXM">
+      <h3>hardware restart temp sensor x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartTempSensorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#HardwareRestart"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart">hardware restart</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HighVarianceAlarmXM">
+      <h3>high variance alarm x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceAlarmXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FailureMode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#HighVariance"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance">high variance</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#happensAt"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#happensAt">happens at</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#AlarmXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#AlarmXM">alarm x m</a>
+         </dd>
+         <dd>
+            <a href="#hasRecoveryAction"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction">has recovery action</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#SoftwareRestartAlarmXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartAlarmXM">software restart alarm x m</a>
+         </dd>
+         <dd>
+            <a href="#hasFailureCode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode">has failure code</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"0x3432"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HighVarianceLeakDetectorXM">
+      <h3>high variance leak detector x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FailureMode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#HighVariance"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance">high variance</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#happensAt"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#happensAt">happens at</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#LeakDetectorMX"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#LeakDetectorMX">leak detector m x</a>
+         </dd>
+         <dd>
+            <a href="#hasRecoveryAction"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction">has recovery action</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#FirmwareUpdateLeakDetectionXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLeakDetectionXM">firmware update leak detection x m</a>
+         </dd>
+         <dd>
+            <a href="#isCausedBy"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy">is caused by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#FirmwareFailureLeakDetectionXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareFailureLeakDetectionXM">firmware failure leak detection x m</a>
+         </dd>
+         <dd>
+            <a href="#hasFailureCode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode">has failure code</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"0x8564000"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HighVarianceLighBulbXM">
+      <h3>high variance ligh bulb x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLighBulbXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FailureMode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#HighVariance"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance">high variance</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#happensAt"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#happensAt">happens at</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#LightBulbXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#LightBulbXM">light bulb x m</a>
+         </dd>
+         <dd>
+            <a href="#hasRecoveryAction"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction">has recovery action</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#FirmwareUpdateLightBulbXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLightBulbXM">firmware update light bulb x m</a>
+         </dd>
+         <dd>
+            <a href="#hasFailureCode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode">has failure code</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"0x23442"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HighVarianceSmokeSensorXM">
+      <h3>high variance smoke sensor x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FailureMode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#HighVariance"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance">high variance</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#happensAt"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#happensAt">happens at</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#SmokeSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM">smoke sensor x m</a>
+         </dd>
+         <dd>
+            <a href="#hasRecoveryAction"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction">has recovery action</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#HardwareRestartSmokeSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartSmokeSensorXM">hardware restart smoke sensor x m</a>
+         </dd>
+         <dd>
+            <a href="#isCausedBy"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy">is caused by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#HighVarianceSmokeSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM">high variance smoke sensor x m</a>
+         </dd>
+         <dd>
+            <a href="#hasFailureCode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode">has failure code</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"0x234"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HighVarianceTempSensorXM">
+      <h3>high variance temp sensor x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FailureMode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#HighVariance"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance">high variance</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#happensAt"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#happensAt">happens at</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#TempSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM">temp sensor x m</a>
+         </dd>
+         <dd>
+            <a href="#hasRecoveryAction"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction">has recovery action</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#HighVarianceTempSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM">high variance temp sensor x m</a>
+         </dd>
+         <dd>
+            <a href="#isCausedBy"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy">is caused by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#HardwareFailureTempSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailureTempSensorXM">hardware failure temp sensor x m</a>
+         </dd>
+         <dd>
+            <a href="#hasFailureCode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode">has failure code</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"0x801"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LeakDetectorMX">
+      <h3>leak detector m x<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#LeakDetectorMX</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FeatureKind"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind">feature kind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LightBulbXM">
+      <h3>light bulb x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#LightBulbXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FeatureKind"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind">feature kind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MotionSensorXM">
+      <h3>motion sensor x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#MotionSensorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FeatureKind"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind">feature kind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PowerFailureMotionSensorXM">
+      <h3>power failure motion sensor x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailureMotionSensorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#PowerFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure">power failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SmartThingsHub">
+      <h3>smart things hub<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#SmartThingsHub</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FeatureKind"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind">feature kind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SmokeSensorXM">
+      <h3>smoke sensor x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FeatureKind"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind">feature kind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SoftwareFailureSmartThingsHub">
+      <h3>software failure smart things hub<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmartThingsHub</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SoftwareFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure">software failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SoftwareFailureSmokeSensorXM">
+      <h3>software failure smoke sensor x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmokeSensorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SoftwareFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure">software failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SoftwareFailureTempSensorXM">
+      <h3>software failure temp sensor x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureTempSensorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SoftwareFailure"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure">software failure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SoftwareRestartAlarmXM">
+      <h3>software restart alarm x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartAlarmXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SoftwareRestart"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart">software restart</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SoftwareRestartSmokeSensorXM">
+      <h3>software restart smoke sensor x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartSmokeSensorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SoftwareRestart"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart">software restart</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SoftwareUpdateSmartThingsHub">
+      <h3>software update smart things hub<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateSmartThingsHub</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SoftwareUpdate"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate">software update</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SoftwareUpdateTempSensorXM">
+      <h3>software update temp sensor x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateTempSensorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SoftwareUpdate"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate">software update</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SpikeTempSensorXM">
+      <h3>spike temp sensor x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FailureMode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#Spike"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#Spike">spike</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#happensAt"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#happensAt">happens at</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#TempSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM">temp sensor x m</a>
+         </dd>
+         <dd>
+            <a href="#hasRecoveryAction"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction">has recovery action</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#SoftwareUpdateTempSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateTempSensorXM">software update temp sensor x m</a>
+         </dd>
+         <dd>
+            <a href="#isCausedBy"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy">is caused by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#SoftwareFailureTempSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureTempSensorXM">software failure temp sensor x m</a>
+         </dd>
+         <dd>
+            <a href="#hasFailureCode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode">has failure code</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"0x80000000"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StuckAtMotionSensor">
+      <h3>stuck at motion sensor<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtMotionSensor</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FailureMode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#StuckAt"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt">stuck at</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#happensAt"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#happensAt">happens at</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#MotionSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#MotionSensorXM">motion sensor x m</a>
+         </dd>
+         <dd>
+            <a href="#hasRecoveryAction"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction">has recovery action</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#HardwareRestartMotionSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartMotionSensorXM">hardware restart motion sensor x m</a>
+         </dd>
+         <dd>
+            <a href="#isCausedBy"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy">is caused by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#PowerFailureMotionSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailureMotionSensorXM">power failure motion sensor x m</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StuckAtSmokeSensorXM">
+      <h3>stuck at smoke sensor x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FailureMode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">failure mode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#StuckAt"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt">stuck at</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#happensAt"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#happensAt">happens at</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#SmokeSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM">smoke sensor x m</a>
+         </dd>
+         <dd>
+            <a href="#hasRecoveryAction"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction">has recovery action</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#SoftwareRestartSmokeSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartSmokeSensorXM">software restart smoke sensor x m</a>
+         </dd>
+         <dd>
+            <a href="#isCausedBy"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy">is caused by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#SoftwareFailureSmokeSensorXM"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmokeSensorXM">software failure smoke sensor x m</a>
+         </dd>
+         <dd>
+            <a href="#hasFailureCode"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode">has failure code</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"0x345"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TempSensorXM">
+      <h3>temp sensor x m<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#FeatureKind"
+               title="http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind">feature kind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

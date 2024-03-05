@@ -1,0 +1,960 @@
+[ {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/FeatureKind"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#broader"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/FeatureKind"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#narrower"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://org.semanticweb.owlapi/error#Error1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "IoT-F reprensents failures of IoT systems."
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "IoT Failure ontology"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "http://www.semanticweb.org/orangeinnovation/IoTF"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://saref.etsi.org/core/"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@value" : "http://www.semanticweb.org/orangeinnovation/IoTF/0.0.1"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.0.1"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#AlarmXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#AudioOutputFault",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#BLEFault",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#BatteryFluctuation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#Calibration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "happens when sensor data may have offset or have a different gain from the ground truth values."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#CellularFault",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#CompensatoryAction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "denotes actions that allows recovering a device from a given failure."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "represents failure cause related to the connectivity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailureMotionSensorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityMotionSensorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1000"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailureMotionSensorXM"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#Device",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://saref.etsi.org/core/Device"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#Environnment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "represents failure cause related to the environment."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#EthernetFault",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailStop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "happens when a device stops functioning and is un-responsive to external requests."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "denotes the cause of a failure."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureEffect",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "represents the effects of a failure mode."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a form of a dysfunction related to an IoTdevice."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureSmartThingsHub",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmartThingsHub"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "denotes a type of a market IoT device e.g., FIBARO light bulb."
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://saref.etsi.org/core/FeatureKind"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareFailureLeakDetectionXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#CompensatoryAction"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLeakDetectionXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLightBulbXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "represents failure cause related to the hardware."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailureTempSensorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#CompensatoryAction"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartMotionSensorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartSmokeSensorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartTempSensorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A high variance failure appears when a device’s state fluctuates back and forth more rapidly than the environment dictates."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceAlarmXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#happensAt" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#AlarmXM"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode" : [ {
+    "@value" : "0x3432"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartAlarmXM"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  }, {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1000"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#happensAt" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#LeakDetectorMX"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode" : [ {
+    "@value" : "0x8564000"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLeakDetectionXM"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareFailureLeakDetectionXM"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  }, {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLighBulbXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#happensAt" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#LightBulbXM"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode" : [ {
+    "@value" : "0x23442"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLightBulbXM"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  }, {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "203"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#happensAt" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode" : [ {
+    "@value" : "0x234"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartSmokeSensorXM"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  }, {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1000"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#happensAt" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode" : [ {
+    "@value" : "0x801"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailureTempSensorXM"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  }, {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#LeakDetectorMX",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#LightBulbXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#LowBattery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#MotionSensorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#NFCFault",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "failure relate to a response by the device that diverges from the desired device state."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#NonVolatileMemoryError",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#Omission",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#Outlier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "an outlier failure occurs when a device to report an incorrect state for a very brief period, usually theduration of just 1 poll."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "reprensents failure cause related to power e.g, battery level."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailureMotionSensorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PowerSource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://saref.etsi.org/core/PropertyValue"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#RebootCount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SmartThingsHub",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "represents failure cause related to software."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmartThingsHub",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmokeSensorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureTempSensorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#CompensatoryAction"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartAlarmXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartSmokeSensorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#CompensatoryAction"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateSmartThingsHub",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateTempSensorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#Spike",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A spike fault happens when there is a rapid increase or decrease in the device state."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#happensAt" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode" : [ {
+    "@value" : "0x80000000"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateTempSensorXM"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureTempSensorXM"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  }, {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#Spike"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A stuck-at failure happens when a device cannot change state, maintaining the same state despite changes in environment or actuation commands."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtMotionSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#happensAt" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#MotionSensorXM"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartMotionSensorXM"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailureMotionSensorXM"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  }, {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1005"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#happensAt" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode" : [ {
+    "@value" : "0x345"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartSmokeSensorXM"
+  } ],
+  "http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmokeSensorXM"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  }, {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#Temperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#ThreadFault",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#Timing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#TotalOperationalTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#UpTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#UserInterfaceFault",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#VisualDisplayFault",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#WIFIFault",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#becauseOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#effectIs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#happensAt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#hasDeviceType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FeatureKind"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#CompensatoryAction"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#hasSymptom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#PropertyValue"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#producesEffect",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#FailureEffect"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#cardinality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#broader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#historyNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#narrower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://saref.etsi.org/core/Device",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A tangible object designed to accomplish a particular task. In order to accomplish this task, the device performs one or more functions. An instance of saref:Device represents one specific real world entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://saref.etsi.org/core/FeatureOfInterest"
+  }, {
+    "@id" : "https://saref.etsi.org/saref4syst/System"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Examples of devices are a light switch, a temperature sensor, an energy meter, a water flow meter, and a laundry dryer. A laundry dryer is designed to dry laundry, and to accomplish this task it has a start/stop function."
+  }, {
+    "@language" : "en",
+    "@value" : "For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#historyNote" : [ {
+    "@language" : "en",
+    "@value" : "V3.2.1: Most axioms on saref:Device were useless and have been deleted."
+  }, {
+    "@language" : "en",
+    "@value" : "V3.2.1: definition of saref:Device clarifies it's a real world entity."
+  }, {
+    "@language" : "en",
+    "@value" : "V3.2.1: saref:Device is explicitly a subclass of saref:FeatureOfInterest and s4syst:System."
+  } ]
+}, {
+  "@id" : "https://saref.etsi.org/core/FeatureKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Feature kinds allow to describe kinds of features of interest, with common properties having the same value, and common states being the same. An instance of saref:FeatureKind represents an archetype of real world entities, for example to populate product catalogs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Feature kinds"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#historyNote" : [ {
+    "@language" : "en",
+    "@value" : "V3.2.1: Introduced class saref:FeatureKind"
+  }, {
+    "@language" : "en",
+    "@value" : "V3.2.1: Use SKOS to organize generic classes in taxonomies."
+  } ]
+}, {
+  "@id" : "https://saref.etsi.org/core/FeatureOfInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://saref.etsi.org/core/PropertyValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Describes the value for a property. The property value is linked to its value expressed as an RDF literal (DP saref:hasValue), optionally to the unit of measurement (OP saref:isMeasuredIn), and optionally to the properties or properties of interest it is a value of (OP saref:isValueOfProperty)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Property Value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://org.semanticweb.owlapi/error#Error1"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#historyNote" : [ {
+    "@language" : "en",
+    "@value" : "V3.2.1: Introduced saref:PropertyValue to simplify the association of a measure to a property, without always needing it to be a measurement made by a device."
+  } ]
+}, {
+  "@id" : "https://saref.etsi.org/core/hasDeviceKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a device to its kind, a feature kind. Kinds of devices describe models of devices, with common properties having the same value, common states being the same, common functions, and common services."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has device kind"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://saref.etsi.org/core/FeatureKind"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://saref.etsi.org/core/hasFeatureKind"
+  } ]
+}, {
+  "@id" : "https://saref.etsi.org/core/hasFeatureKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://saref.etsi.org/core/hasPropertyValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a feature kind, a feature of interest, or a property of interest, to a property value."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/orangeinnovation/IoTF#Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has property value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://saref.etsi.org/core/PropertyValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#broader"
+    }, {
+      "@id" : "https://saref.etsi.org/core/hasPropertyValue"
+    } ]
+  } ],
+  "http://www.w3.org/2004/02/skos/core#historyNote" : [ {
+    "@language" : "en",
+    "@value" : "V3.2.1: Introduced saref:hasPropertyValue."
+  } ]
+}, {
+  "@id" : "https://saref.etsi.org/saref4syst/System",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+} ]
