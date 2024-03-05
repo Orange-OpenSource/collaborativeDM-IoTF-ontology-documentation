@@ -17,8 +17,6 @@ The ontology documentation is built using the [Widoco](https://github.com/dgarij
 – CQ5. For each failure mode, what are its causes?
 – CQ6. For each failure mode, what are its possible recovery actions?
 ```
-
-```
 ## License
  
  This software is distributed under [BSD-3-Clause](LICENCE). 
