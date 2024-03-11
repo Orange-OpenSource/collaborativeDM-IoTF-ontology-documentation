@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/orangeinnovation/IoTF#"
-     xml:base="http://www.semanticweb.org/orangeinnovation/IoTF"
+<rdf:RDF xmlns="https://w3id.org/iotf#"
+     xml:base="https://w3id.org/iotf"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:IoTF="http://www.semanticweb.org/orangeinnovation/IoTF#"
+     xmlns:IoTF="https://w3id.org/iotf#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:NetworkI="http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF">
+     xmlns:NetworkI="https://w3id.org/iotf#NetworkI/">
+    <owl:Ontology rdf:about="https://w3id.org/iotf">
         <owl:imports rdf:resource="https://saref.etsi.org/core/"/>
         <terms:description>IoT-F reprensents failures of IoT systems.</terms:description>
         <terms:title>IoT Failure ontology</terms:title>
-        <vann:preferredNamespaceUri>http://www.semanticweb.org/orangeinnovation/IoTF</vann:preferredNamespaceUri>
-        <owl:versionIRI>http://www.semanticweb.org/orangeinnovation/IoTF/0.0.1</owl:versionIRI>
+        <vann:preferredNamespaceUri>https://w3id.org/iotf</vann:preferredNamespaceUri>
+        <owl:versionIRI>https://w3id.org/iotf/0.0.1</owl:versionIRI>
         <owl:versionInfo>0.0.1</owl:versionInfo>
     </owl:Ontology>
     
@@ -110,31 +110,31 @@
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel -->
+    <!-- https://w3id.org/iotf#BatteryLevel -->
 
 
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel"/>
+    <owl:AnnotationProperty rdf:about="https://w3id.org/iotf#BatteryLevel"/>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage -->
+    <!-- https://w3id.org/iotf#CPUUsage -->
 
 
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage"/>
+    <owl:AnnotationProperty rdf:about="https://w3id.org/iotf#CPUUsage"/>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage -->
+    <!-- https://w3id.org/iotf#MemoryUsage -->
 
 
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage"/>
+    <owl:AnnotationProperty rdf:about="https://w3id.org/iotf#MemoryUsage"/>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O -->
+    <!-- https://w3id.org/iotf#NetworkI/O -->
 
 
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O"/>
+    <owl:AnnotationProperty rdf:about="https://w3id.org/iotf#NetworkI/O"/>
     
 
 
@@ -157,72 +157,72 @@
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#becauseOf -->
+    <!-- https://w3id.org/iotf#becauseOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#becauseOf">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/iotf#becauseOf">
+        <rdfs:domain rdf:resource="https://w3id.org/iotf#FailureMode"/>
+        <rdfs:range rdf:resource="https://w3id.org/iotf#FailureMode"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#effectIs -->
+    <!-- https://w3id.org/iotf#effectIs -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#effectIs">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/iotf#effectIs">
+        <rdfs:domain rdf:resource="https://w3id.org/iotf#FailureMode"/>
+        <rdfs:range rdf:resource="https://w3id.org/iotf#FailureMode"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#happensAt -->
+    <!-- https://w3id.org/iotf#happensAt -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#happensAt">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/iotf#happensAt">
+        <rdfs:domain rdf:resource="https://w3id.org/iotf#FailureMode"/>
+        <rdfs:range rdf:resource="https://w3id.org/iotf#DeviceType"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#hasDeviceType -->
+    <!-- https://w3id.org/iotf#hasDeviceType -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#hasDeviceType">
+    <owl:ObjectProperty rdf:about="https://w3id.org/iotf#hasDeviceType">
         <rdfs:domain rdf:resource="https://saref.etsi.org/core/Device"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType"/>
+        <rdfs:range rdf:resource="https://w3id.org/iotf#DeviceType"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction -->
+    <!-- https://w3id.org/iotf#hasRecoveryAction -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/iotf#hasRecoveryAction">
+        <rdfs:domain rdf:resource="https://w3id.org/iotf#FailureMode"/>
+        <rdfs:range rdf:resource="https://w3id.org/iotf#RecoveryAction"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy -->
+    <!-- https://w3id.org/iotf#isCausedBy -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/iotf#isCausedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/iotf#FailureMode"/>
+        <rdfs:range rdf:resource="https://w3id.org/iotf#FailureCause"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#producesEffect -->
+    <!-- https://w3id.org/iotf#producesEffect -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#producesEffect">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureEffect"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/iotf#producesEffect">
+        <rdfs:domain rdf:resource="https://w3id.org/iotf#FailureMode"/>
+        <rdfs:range rdf:resource="https://w3id.org/iotf#FailureEffect"/>
     </owl:ObjectProperty>
     
 
@@ -654,11 +654,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode -->
+    <!-- https://w3id.org/iotf#hasFailureCode -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/iotf#hasFailureCode">
+        <rdfs:domain rdf:resource="https://w3id.org/iotf#FailureMode"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -728,464 +728,464 @@
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#AudioOutputFault -->
+    <!-- https://w3id.org/iotf#AudioOutputFault -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#AudioOutputFault">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#AudioOutputFault">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#HardwareFailure"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#BLEFault -->
+    <!-- https://w3id.org/iotf#BLEFault -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#BLEFault">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#BLEFault">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#RadioFault"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#BatteryFluctuation -->
+    <!-- https://w3id.org/iotf#BatteryFluctuation -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#BatteryFluctuation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#BatteryFluctuation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#PowerFailure"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel -->
+    <!-- https://w3id.org/iotf#BatteryLevel -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#BatteryLevel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#Symptom"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage -->
+    <!-- https://w3id.org/iotf#CPUUsage -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#CPUUsage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#Symptom"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#Calibration -->
+    <!-- https://w3id.org/iotf#Calibration -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#Calibration">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#Calibration">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#NonFailStop"/>
         <rdfs:comment>happens when sensor data may have offset or have a different gain from the ground truth values.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#CellularFault -->
+    <!-- https://w3id.org/iotf#CellularFault -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#CellularFault">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#CellularFault">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#RadioFault"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure -->
+    <!-- https://w3id.org/iotf#CommunicationFailure -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#CommunicationFailure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#FailureMode"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure -->
+    <!-- https://w3id.org/iotf#ConnectivityFailure -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#ConnectivityFailure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#FailureCause"/>
         <rdfs:comment>represents failure cause related to the connectivity.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType -->
+    <!-- https://w3id.org/iotf#DeviceType -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType">
+    <owl:Class rdf:about="https://w3id.org/iotf#DeviceType">
         <rdfs:comment>denotes a type of a market IoT device e.g., FIBARO light bulb.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#Environnment -->
+    <!-- https://w3id.org/iotf#Environnment -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#Environnment">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#Environnment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#FailureCause"/>
         <rdfs:comment>represents failure cause related to the environment.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#EthernetFault -->
+    <!-- https://w3id.org/iotf#EthernetFault -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#EthernetFault">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#EthernetFault">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#RadioFault"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FailStop -->
+    <!-- https://w3id.org/iotf#FailStop -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FailStop">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#FailStop">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#FailureMode"/>
         <rdfs:comment>happens when a device stops functioning and is un-responsive to external requests.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause -->
+    <!-- https://w3id.org/iotf#FailureCause -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause">
+    <owl:Class rdf:about="https://w3id.org/iotf#FailureCause">
         <rdfs:comment>denotes the cause of a failure.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FailureEffect -->
+    <!-- https://w3id.org/iotf#FailureEffect -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FailureEffect">
+    <owl:Class rdf:about="https://w3id.org/iotf#FailureEffect">
         <rdfs:comment>represents the effects of a failure mode.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode -->
+    <!-- https://w3id.org/iotf#FailureMode -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode">
+    <owl:Class rdf:about="https://w3id.org/iotf#FailureMode">
         <rdfs:comment>a form of a dysfunction related to an IoTdevice.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate -->
+    <!-- https://w3id.org/iotf#FirmwareUpdate -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#FirmwareUpdate">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#RecoveryAction"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareVersion -->
+    <!-- https://w3id.org/iotf#FirmwareVersion -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareVersion">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#FirmwareVersion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#Symptom"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure -->
+    <!-- https://w3id.org/iotf#HardwareFailure -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#HardwareFailure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#FailureCause"/>
         <rdfs:comment>represents failure cause related to the hardware.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart -->
+    <!-- https://w3id.org/iotf#HardwareRestart -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#HardwareRestart">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#RecoveryAction"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HardwareVersion -->
+    <!-- https://w3id.org/iotf#HardwareVersion -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareVersion">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#HardwareVersion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#Symptom"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance -->
+    <!-- https://w3id.org/iotf#HighVariance -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#HighVariance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#NonFailStop"/>
         <rdfs:comment>A high variance failure appears when a device’s state fluctuates back and forth more rapidly than the environment dictates.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#LowBattery -->
+    <!-- https://w3id.org/iotf#LowBattery -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#LowBattery">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#LowBattery">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#PowerFailure"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage -->
+    <!-- https://w3id.org/iotf#MemoryUsage -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#MemoryUsage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#Symptom"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#NFCFault -->
+    <!-- https://w3id.org/iotf#NFCFault -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#NFCFault">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#NFCFault">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#RadioFault"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop -->
+    <!-- https://w3id.org/iotf#NonFailStop -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#NonFailStop">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#FailureMode"/>
         <rdfs:comment>failure relate to a response by the device that diverges from the desired device state.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#NonVolatileMemoryError -->
+    <!-- https://w3id.org/iotf#NonVolatileMemoryError -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#NonVolatileMemoryError">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#NonVolatileMemoryError">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#HardwareFailure"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#Omission -->
+    <!-- https://w3id.org/iotf#Omission -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#Omission">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#Omission">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#CommunicationFailure"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#Outlier -->
+    <!-- https://w3id.org/iotf#Outlier -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#Outlier">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#Outlier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#NonFailStop"/>
         <rdfs:comment>an outlier failure occurs when a device to report an incorrect state for a very brief period, usually theduration of just 1 poll.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure -->
+    <!-- https://w3id.org/iotf#PowerFailure -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#PowerFailure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#FailureCause"/>
         <rdfs:comment>reprensents failure cause related to power e.g, battery level.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#PowerSource -->
+    <!-- https://w3id.org/iotf#PowerSource -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#PowerSource">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#PowerSource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#HardwareFailure"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault -->
+    <!-- https://w3id.org/iotf#RadioFault -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#RadioFault">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#HardwareFailure"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#RebootCount -->
+    <!-- https://w3id.org/iotf#RebootCount -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#RebootCount">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#RebootCount">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#Symptom"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction -->
+    <!-- https://w3id.org/iotf#RecoveryAction -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction">
+    <owl:Class rdf:about="https://w3id.org/iotf#RecoveryAction">
         <rdfs:comment>denotes actions that allows recovering a device from a given failure.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure -->
+    <!-- https://w3id.org/iotf#SoftwareFailure -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#SoftwareFailure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#FailureCause"/>
         <rdfs:comment>represents failure cause related to software.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart -->
+    <!-- https://w3id.org/iotf#SoftwareRestart -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#SoftwareRestart">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#RecoveryAction"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate -->
+    <!-- https://w3id.org/iotf#SoftwareUpdate -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#SoftwareUpdate">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#RecoveryAction"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareVersion -->
+    <!-- https://w3id.org/iotf#SoftwareVersion -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareVersion">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#SoftwareVersion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#Symptom"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#Spike -->
+    <!-- https://w3id.org/iotf#Spike -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#Spike">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#Spike">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#NonFailStop"/>
         <rdfs:comment>A spike fault happens when there is a rapid increase or decrease in the device state.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt -->
+    <!-- https://w3id.org/iotf#StuckAt -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#StuckAt">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#NonFailStop"/>
         <rdfs:comment>A stuck-at failure happens when a device cannot change state, maintaining the same state despite changes in environment or actuation commands.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#Symptom -->
+    <!-- https://w3id.org/iotf#Symptom -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom">
+    <owl:Class rdf:about="https://w3id.org/iotf#Symptom">
         <owl:equivalentClass rdf:resource="https://saref.etsi.org/core/Measurement"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#Temperature -->
+    <!-- https://w3id.org/iotf#Temperature -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#Temperature">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#Temperature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#Symptom"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#ThreadFault -->
+    <!-- https://w3id.org/iotf#ThreadFault -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#ThreadFault">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#ThreadFault">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#RadioFault"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#Timing -->
+    <!-- https://w3id.org/iotf#Timing -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#Timing">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#Timing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#CommunicationFailure"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#TotalOperationalTime -->
+    <!-- https://w3id.org/iotf#TotalOperationalTime -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#TotalOperationalTime">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#TotalOperationalTime">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#Symptom"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#UpTime -->
+    <!-- https://w3id.org/iotf#UpTime -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#UpTime">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#UpTime">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#Symptom"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#UserInterfaceFault -->
+    <!-- https://w3id.org/iotf#UserInterfaceFault -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#UserInterfaceFault">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#UserInterfaceFault">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#HardwareFailure"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#VisualDisplayFault -->
+    <!-- https://w3id.org/iotf#VisualDisplayFault -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#VisualDisplayFault">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#VisualDisplayFault">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#HardwareFailure"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#WIFIFault -->
+    <!-- https://w3id.org/iotf#WIFIFault -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#WIFIFault">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#WIFIFault">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#RadioFault"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O -->
+    <!-- https://w3id.org/iotf#NetworkI/O -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Symptom"/>
+    <owl:Class rdf:about="https://w3id.org/iotf#NetworkI/O">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/iotf#Symptom"/>
     </owl:Class>
     
 
@@ -2581,343 +2581,343 @@
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#AlarmXM -->
+    <!-- https://w3id.org/iotf#AlarmXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#AlarmXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#AlarmXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#DeviceType"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailureMotionSensorXM -->
+    <!-- https://w3id.org/iotf#ConnectivityFailureMotionSensorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailureMotionSensorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#ConnectivityFailureMotionSensorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#ConnectivityFailure"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityMotionSensorXM -->
+    <!-- https://w3id.org/iotf#ConnectivityMotionSensorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityMotionSensorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
-        <isCausedBy rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailureMotionSensorXM"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#ConnectivityMotionSensorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#FailureMode"/>
+        <isCausedBy rdf:resource="https://w3id.org/iotf#ConnectivityFailureMotionSensorXM"/>
         <NetworkI:O rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</NetworkI:O>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FailureSmartThingsHub -->
+    <!-- https://w3id.org/iotf#FailureSmartThingsHub -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FailureSmartThingsHub">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
-        <isCausedBy rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmartThingsHub"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#FailureSmartThingsHub">
+        <rdf:type rdf:resource="https://w3id.org/iotf#FailureMode"/>
+        <isCausedBy rdf:resource="https://w3id.org/iotf#SoftwareFailureSmartThingsHub"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareFailureLeakDetectionXM -->
+    <!-- https://w3id.org/iotf#FirmwareFailureLeakDetectionXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareFailureLeakDetectionXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#FirmwareFailureLeakDetectionXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#SoftwareFailure"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLeakDetectionXM -->
+    <!-- https://w3id.org/iotf#FirmwareUpdateLeakDetectionXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLeakDetectionXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#FirmwareUpdateLeakDetectionXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#FirmwareUpdate"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLightBulbXM -->
+    <!-- https://w3id.org/iotf#FirmwareUpdateLightBulbXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLightBulbXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#FirmwareUpdateLightBulbXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#FirmwareUpdate"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailureTempSensorXM -->
+    <!-- https://w3id.org/iotf#HardwareFailureTempSensorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailureTempSensorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#HardwareFailureTempSensorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#HardwareFailure"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartMotionSensorXM -->
+    <!-- https://w3id.org/iotf#HardwareRestartMotionSensorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartMotionSensorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#HardwareRestartMotionSensorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#HardwareRestart"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartSmokeSensorXM -->
+    <!-- https://w3id.org/iotf#HardwareRestartSmokeSensorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartSmokeSensorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#HardwareRestartSmokeSensorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#HardwareRestart"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartTempSensorXM -->
+    <!-- https://w3id.org/iotf#HardwareRestartTempSensorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartTempSensorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#HardwareRestartTempSensorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#HardwareRestart"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceAlarmXM -->
+    <!-- https://w3id.org/iotf#HighVarianceAlarmXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceAlarmXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance"/>
-        <happensAt rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#AlarmXM"/>
-        <hasRecoveryAction rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartAlarmXM"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#HighVarianceAlarmXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#FailureMode"/>
+        <rdf:type rdf:resource="https://w3id.org/iotf#HighVariance"/>
+        <happensAt rdf:resource="https://w3id.org/iotf#AlarmXM"/>
+        <hasRecoveryAction rdf:resource="https://w3id.org/iotf#SoftwareRestartAlarmXM"/>
         <hasFailureCode>0x3432</hasFailureCode>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM -->
+    <!-- https://w3id.org/iotf#HighVarianceLeakDetectorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance"/>
-        <happensAt rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#LeakDetectorMX"/>
-        <hasRecoveryAction rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLeakDetectionXM"/>
-        <isCausedBy rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareFailureLeakDetectionXM"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#HighVarianceLeakDetectorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#FailureMode"/>
+        <rdf:type rdf:resource="https://w3id.org/iotf#HighVariance"/>
+        <happensAt rdf:resource="https://w3id.org/iotf#LeakDetectorMX"/>
+        <hasRecoveryAction rdf:resource="https://w3id.org/iotf#FirmwareUpdateLeakDetectionXM"/>
+        <isCausedBy rdf:resource="https://w3id.org/iotf#FirmwareFailureLeakDetectionXM"/>
         <hasFailureCode>0x8564000</hasFailureCode>
         <NetworkI:O rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</NetworkI:O>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLighBulbXM -->
+    <!-- https://w3id.org/iotf#HighVarianceLighBulbXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLighBulbXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance"/>
-        <happensAt rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#LightBulbXM"/>
-        <hasRecoveryAction rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLightBulbXM"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#HighVarianceLighBulbXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#FailureMode"/>
+        <rdf:type rdf:resource="https://w3id.org/iotf#HighVariance"/>
+        <happensAt rdf:resource="https://w3id.org/iotf#LightBulbXM"/>
+        <hasRecoveryAction rdf:resource="https://w3id.org/iotf#FirmwareUpdateLightBulbXM"/>
         <hasFailureCode>0x23442</hasFailureCode>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM -->
+    <!-- https://w3id.org/iotf#HighVarianceSmokeSensorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance"/>
-        <happensAt rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM"/>
-        <hasRecoveryAction rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartSmokeSensorXM"/>
-        <isCausedBy rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#HighVarianceSmokeSensorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#FailureMode"/>
+        <rdf:type rdf:resource="https://w3id.org/iotf#HighVariance"/>
+        <happensAt rdf:resource="https://w3id.org/iotf#SmokeSensorXM"/>
+        <hasRecoveryAction rdf:resource="https://w3id.org/iotf#HardwareRestartSmokeSensorXM"/>
+        <isCausedBy rdf:resource="https://w3id.org/iotf#HighVarianceSmokeSensorXM"/>
         <hasFailureCode>0x234</hasFailureCode>
         <BatteryLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">203</BatteryLevel>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM -->
+    <!-- https://w3id.org/iotf#HighVarianceTempSensorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance"/>
-        <happensAt rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM"/>
-        <hasRecoveryAction rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM"/>
-        <isCausedBy rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailureTempSensorXM"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#HighVarianceTempSensorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#FailureMode"/>
+        <rdf:type rdf:resource="https://w3id.org/iotf#HighVariance"/>
+        <happensAt rdf:resource="https://w3id.org/iotf#TempSensorXM"/>
+        <hasRecoveryAction rdf:resource="https://w3id.org/iotf#HighVarianceTempSensorXM"/>
+        <isCausedBy rdf:resource="https://w3id.org/iotf#HardwareFailureTempSensorXM"/>
         <hasFailureCode>0x801</hasFailureCode>
         <CPUUsage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</CPUUsage>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#LeakDetectorMX -->
+    <!-- https://w3id.org/iotf#LeakDetectorMX -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#LeakDetectorMX">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#LeakDetectorMX">
+        <rdf:type rdf:resource="https://w3id.org/iotf#DeviceType"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#LightBulbXM -->
+    <!-- https://w3id.org/iotf#LightBulbXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#LightBulbXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#LightBulbXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#DeviceType"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#MotionSensorXM -->
+    <!-- https://w3id.org/iotf#MotionSensorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#MotionSensorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#MotionSensorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#DeviceType"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailureMotionSensorXM -->
+    <!-- https://w3id.org/iotf#PowerFailureMotionSensorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailureMotionSensorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#PowerFailureMotionSensorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#PowerFailure"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SmartThingsHub -->
+    <!-- https://w3id.org/iotf#SmartThingsHub -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SmartThingsHub">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#SmartThingsHub">
+        <rdf:type rdf:resource="https://w3id.org/iotf#DeviceType"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM -->
+    <!-- https://w3id.org/iotf#SmokeSensorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#SmokeSensorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#DeviceType"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmartThingsHub -->
+    <!-- https://w3id.org/iotf#SoftwareFailureSmartThingsHub -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmartThingsHub">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#SoftwareFailureSmartThingsHub">
+        <rdf:type rdf:resource="https://w3id.org/iotf#SoftwareFailure"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmokeSensorXM -->
+    <!-- https://w3id.org/iotf#SoftwareFailureSmokeSensorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmokeSensorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#SoftwareFailureSmokeSensorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#SoftwareFailure"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureTempSensorXM -->
+    <!-- https://w3id.org/iotf#SoftwareFailureTempSensorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureTempSensorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#SoftwareFailureTempSensorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#SoftwareFailure"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartAlarmXM -->
+    <!-- https://w3id.org/iotf#SoftwareRestartAlarmXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartAlarmXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#SoftwareRestartAlarmXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#SoftwareRestart"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartSmokeSensorXM -->
+    <!-- https://w3id.org/iotf#SoftwareRestartSmokeSensorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartSmokeSensorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#SoftwareRestartSmokeSensorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#SoftwareRestart"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateSmartThingsHub -->
+    <!-- https://w3id.org/iotf#SoftwareUpdateSmartThingsHub -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateSmartThingsHub">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#SoftwareUpdateSmartThingsHub">
+        <rdf:type rdf:resource="https://w3id.org/iotf#SoftwareUpdate"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateTempSensorXM -->
+    <!-- https://w3id.org/iotf#SoftwareUpdateTempSensorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateTempSensorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#SoftwareUpdateTempSensorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#SoftwareUpdate"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM -->
+    <!-- https://w3id.org/iotf#SpikeTempSensorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#Spike"/>
-        <happensAt rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM"/>
-        <hasRecoveryAction rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateTempSensorXM"/>
-        <isCausedBy rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureTempSensorXM"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#SpikeTempSensorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#FailureMode"/>
+        <rdf:type rdf:resource="https://w3id.org/iotf#Spike"/>
+        <happensAt rdf:resource="https://w3id.org/iotf#TempSensorXM"/>
+        <hasRecoveryAction rdf:resource="https://w3id.org/iotf#SoftwareUpdateTempSensorXM"/>
+        <isCausedBy rdf:resource="https://w3id.org/iotf#SoftwareFailureTempSensorXM"/>
         <hasFailureCode>0x80000000</hasFailureCode>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtMotionSensor -->
+    <!-- https://w3id.org/iotf#StuckAtMotionSensor -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtMotionSensor">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt"/>
-        <happensAt rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#MotionSensorXM"/>
-        <hasRecoveryAction rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartMotionSensorXM"/>
-        <isCausedBy rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailureMotionSensorXM"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#StuckAtMotionSensor">
+        <rdf:type rdf:resource="https://w3id.org/iotf#FailureMode"/>
+        <rdf:type rdf:resource="https://w3id.org/iotf#StuckAt"/>
+        <happensAt rdf:resource="https://w3id.org/iotf#MotionSensorXM"/>
+        <hasRecoveryAction rdf:resource="https://w3id.org/iotf#HardwareRestartMotionSensorXM"/>
+        <isCausedBy rdf:resource="https://w3id.org/iotf#PowerFailureMotionSensorXM"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM -->
+    <!-- https://w3id.org/iotf#StuckAtSmokeSensorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt"/>
-        <happensAt rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM"/>
-        <hasRecoveryAction rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartSmokeSensorXM"/>
-        <isCausedBy rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmokeSensorXM"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#StuckAtSmokeSensorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#FailureMode"/>
+        <rdf:type rdf:resource="https://w3id.org/iotf#StuckAt"/>
+        <happensAt rdf:resource="https://w3id.org/iotf#SmokeSensorXM"/>
+        <hasRecoveryAction rdf:resource="https://w3id.org/iotf#SoftwareRestartSmokeSensorXM"/>
+        <isCausedBy rdf:resource="https://w3id.org/iotf#SoftwareFailureSmokeSensorXM"/>
         <hasFailureCode>0x345</hasFailureCode>
         <MemoryUsage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1005</MemoryUsage>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM -->
+    <!-- https://w3id.org/iotf#TempSensorXM -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/iotf#TempSensorXM">
+        <rdf:type rdf:resource="https://w3id.org/iotf#DeviceType"/>
     </owl:NamedIndividual>
     
 
