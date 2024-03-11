@@ -1,10 +1,10 @@
-<http://www.semanticweb.org/orangeinnovation/IoTF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://www.semanticweb.org/orangeinnovation/IoTF> <http://www.w3.org/2002/07/owl#imports> <https://saref.etsi.org/core/> .
-<http://www.semanticweb.org/orangeinnovation/IoTF> <http://purl.org/dc/terms/description> "IoT-F reprensents failures of IoT systems." .
-<http://www.semanticweb.org/orangeinnovation/IoTF> <http://purl.org/dc/terms/title> "IoT Failure ontology" .
-<http://www.semanticweb.org/orangeinnovation/IoTF> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.semanticweb.org/orangeinnovation/IoTF" .
-<http://www.semanticweb.org/orangeinnovation/IoTF> <http://www.w3.org/2002/07/owl#versionIRI> "http://www.semanticweb.org/orangeinnovation/IoTF/0.0.1" .
-<http://www.semanticweb.org/orangeinnovation/IoTF> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+<https://w3id.org/iotf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/iotf> <http://www.w3.org/2002/07/owl#imports> <https://saref.etsi.org/core/> .
+<https://w3id.org/iotf> <http://purl.org/dc/terms/description> "IoT-F reprensents failures of IoT systems." .
+<https://w3id.org/iotf> <http://purl.org/dc/terms/title> "IoT Failure ontology" .
+<https://w3id.org/iotf> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/iotf" .
+<https://w3id.org/iotf> <http://www.w3.org/2002/07/owl#versionIRI> "https://w3id.org/iotf/0.0.1" .
+<https://w3id.org/iotf> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
 # 
 # 
 # #################################################################
@@ -47,17 +47,17 @@
 # http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel
-<http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# https://w3id.org/iotf#BatteryLevel
+<https://w3id.org/iotf#BatteryLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage
-<http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# https://w3id.org/iotf#CPUUsage
+<https://w3id.org/iotf#CPUUsage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage
-<http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# https://w3id.org/iotf#MemoryUsage
+<https://w3id.org/iotf#MemoryUsage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O
-<http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# https://w3id.org/iotf#NetworkI/O
+<https://w3id.org/iotf#NetworkI/O> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://www.w3.org/2002/07/owl#versionIRI
 <http://www.w3.org/2002/07/owl#versionIRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -71,40 +71,40 @@
 # #################################################################
 # 
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#becauseOf
-<http://www.semanticweb.org/orangeinnovation/IoTF#becauseOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#becauseOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#becauseOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
+# https://w3id.org/iotf#becauseOf
+<https://w3id.org/iotf#becauseOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iotf#becauseOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#becauseOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iotf#FailureMode> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#effectIs
-<http://www.semanticweb.org/orangeinnovation/IoTF#effectIs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#effectIs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#effectIs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
+# https://w3id.org/iotf#effectIs
+<https://w3id.org/iotf#effectIs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iotf#effectIs> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#effectIs> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iotf#FailureMode> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#happensAt
-<http://www.semanticweb.org/orangeinnovation/IoTF#happensAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#happensAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#happensAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType> .
+# https://w3id.org/iotf#happensAt
+<https://w3id.org/iotf#happensAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iotf#happensAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#happensAt> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iotf#DeviceType> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#hasDeviceType
-<http://www.semanticweb.org/orangeinnovation/IoTF#hasDeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#hasDeviceType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core/Device> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#hasDeviceType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType> .
+# https://w3id.org/iotf#hasDeviceType
+<https://w3id.org/iotf#hasDeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iotf#hasDeviceType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core/Device> .
+<https://w3id.org/iotf#hasDeviceType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iotf#DeviceType> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction
-<http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction> .
+# https://w3id.org/iotf#hasRecoveryAction
+<https://w3id.org/iotf#hasRecoveryAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iotf#hasRecoveryAction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#hasRecoveryAction> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iotf#RecoveryAction> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy
-<http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause> .
+# https://w3id.org/iotf#isCausedBy
+<https://w3id.org/iotf#isCausedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iotf#isCausedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#isCausedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iotf#FailureCause> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#producesEffect
-<http://www.semanticweb.org/orangeinnovation/IoTF#producesEffect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#producesEffect> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#producesEffect> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureEffect> .
+# https://w3id.org/iotf#producesEffect
+<https://w3id.org/iotf#producesEffect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iotf#producesEffect> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#producesEffect> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iotf#FailureEffect> .
 # 
 # https://saref.etsi.org/core/accomplishes
 <https://saref.etsi.org/core/accomplishes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -355,10 +355,10 @@
 # #################################################################
 # 
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode
-<http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# https://w3id.org/iotf#hasFailureCode
+<https://w3id.org/iotf#hasFailureCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iotf#hasFailureCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#hasFailureCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 # 
 # https://saref.etsi.org/core/hasDescription
 <https://saref.etsi.org/core/hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -396,217 +396,217 @@
 # #################################################################
 # 
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#AudioOutputFault
-<http://www.semanticweb.org/orangeinnovation/IoTF#AudioOutputFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#AudioOutputFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure> .
+# https://w3id.org/iotf#AudioOutputFault
+<https://w3id.org/iotf#AudioOutputFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#AudioOutputFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#HardwareFailure> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#BLEFault
-<http://www.semanticweb.org/orangeinnovation/IoTF#BLEFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#BLEFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault> .
+# https://w3id.org/iotf#BLEFault
+<https://w3id.org/iotf#BLEFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#BLEFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#RadioFault> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#BatteryFluctuation
-<http://www.semanticweb.org/orangeinnovation/IoTF#BatteryFluctuation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#BatteryFluctuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure> .
+# https://w3id.org/iotf#BatteryFluctuation
+<https://w3id.org/iotf#BatteryFluctuation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#BatteryFluctuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#PowerFailure> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel
-<http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#Symptom> .
+# https://w3id.org/iotf#BatteryLevel
+<https://w3id.org/iotf#BatteryLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#BatteryLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#Symptom> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage
-<http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#Symptom> .
+# https://w3id.org/iotf#CPUUsage
+<https://w3id.org/iotf#CPUUsage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#CPUUsage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#Symptom> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#Calibration
-<http://www.semanticweb.org/orangeinnovation/IoTF#Calibration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#Calibration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#Calibration> <http://www.w3.org/2000/01/rdf-schema#comment> "happens when sensor data may have offset or have a different gain from the ground truth values." .
+# https://w3id.org/iotf#Calibration
+<https://w3id.org/iotf#Calibration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#Calibration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#NonFailStop> .
+<https://w3id.org/iotf#Calibration> <http://www.w3.org/2000/01/rdf-schema#comment> "happens when sensor data may have offset or have a different gain from the ground truth values." .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#CellularFault
-<http://www.semanticweb.org/orangeinnovation/IoTF#CellularFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#CellularFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault> .
+# https://w3id.org/iotf#CellularFault
+<https://w3id.org/iotf#CellularFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#CellularFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#RadioFault> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure
-<http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
+# https://w3id.org/iotf#CommunicationFailure
+<https://w3id.org/iotf#CommunicationFailure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#CommunicationFailure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#FailureMode> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure
-<http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure> <http://www.w3.org/2000/01/rdf-schema#comment> "represents failure cause related to the connectivity." .
+# https://w3id.org/iotf#ConnectivityFailure
+<https://w3id.org/iotf#ConnectivityFailure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#ConnectivityFailure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#FailureCause> .
+<https://w3id.org/iotf#ConnectivityFailure> <http://www.w3.org/2000/01/rdf-schema#comment> "represents failure cause related to the connectivity." .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType
-<http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType> <http://www.w3.org/2000/01/rdf-schema#comment> "denotes a type of a market IoT device e.g., FIBARO light bulb." .
+# https://w3id.org/iotf#DeviceType
+<https://w3id.org/iotf#DeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#DeviceType> <http://www.w3.org/2000/01/rdf-schema#comment> "denotes a type of a market IoT device e.g., FIBARO light bulb." .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#Environnment
-<http://www.semanticweb.org/orangeinnovation/IoTF#Environnment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#Environnment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#Environnment> <http://www.w3.org/2000/01/rdf-schema#comment> "represents failure cause related to the environment." .
+# https://w3id.org/iotf#Environnment
+<https://w3id.org/iotf#Environnment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#Environnment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#FailureCause> .
+<https://w3id.org/iotf#Environnment> <http://www.w3.org/2000/01/rdf-schema#comment> "represents failure cause related to the environment." .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#EthernetFault
-<http://www.semanticweb.org/orangeinnovation/IoTF#EthernetFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#EthernetFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault> .
+# https://w3id.org/iotf#EthernetFault
+<https://w3id.org/iotf#EthernetFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#EthernetFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#RadioFault> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#FailStop
-<http://www.semanticweb.org/orangeinnovation/IoTF#FailStop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#FailStop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#FailStop> <http://www.w3.org/2000/01/rdf-schema#comment> "happens when a device stops functioning and is un-responsive to external requests." .
+# https://w3id.org/iotf#FailStop
+<https://w3id.org/iotf#FailStop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#FailStop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#FailStop> <http://www.w3.org/2000/01/rdf-schema#comment> "happens when a device stops functioning and is un-responsive to external requests." .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause
-<http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause> <http://www.w3.org/2000/01/rdf-schema#comment> "denotes the cause of a failure." .
+# https://w3id.org/iotf#FailureCause
+<https://w3id.org/iotf#FailureCause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#FailureCause> <http://www.w3.org/2000/01/rdf-schema#comment> "denotes the cause of a failure." .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#FailureEffect
-<http://www.semanticweb.org/orangeinnovation/IoTF#FailureEffect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#FailureEffect> <http://www.w3.org/2000/01/rdf-schema#comment> "represents the effects of a failure mode." .
+# https://w3id.org/iotf#FailureEffect
+<https://w3id.org/iotf#FailureEffect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#FailureEffect> <http://www.w3.org/2000/01/rdf-schema#comment> "represents the effects of a failure mode." .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode
-<http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> <http://www.w3.org/2000/01/rdf-schema#comment> "a form of a dysfunction related to an IoTdevice." .
+# https://w3id.org/iotf#FailureMode
+<https://w3id.org/iotf#FailureMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#FailureMode> <http://www.w3.org/2000/01/rdf-schema#comment> "a form of a dysfunction related to an IoTdevice." .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate
-<http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction> .
+# https://w3id.org/iotf#FirmwareUpdate
+<https://w3id.org/iotf#FirmwareUpdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#FirmwareUpdate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#RecoveryAction> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareVersion
-<http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareVersion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#Symptom> .
+# https://w3id.org/iotf#FirmwareVersion
+<https://w3id.org/iotf#FirmwareVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#FirmwareVersion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#Symptom> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure
-<http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure> <http://www.w3.org/2000/01/rdf-schema#comment> "represents failure cause related to the hardware." .
+# https://w3id.org/iotf#HardwareFailure
+<https://w3id.org/iotf#HardwareFailure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#HardwareFailure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#FailureCause> .
+<https://w3id.org/iotf#HardwareFailure> <http://www.w3.org/2000/01/rdf-schema#comment> "represents failure cause related to the hardware." .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart
-<http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction> .
+# https://w3id.org/iotf#HardwareRestart
+<https://w3id.org/iotf#HardwareRestart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#HardwareRestart> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#RecoveryAction> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#HardwareVersion
-<http://www.semanticweb.org/orangeinnovation/IoTF#HardwareVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HardwareVersion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#Symptom> .
+# https://w3id.org/iotf#HardwareVersion
+<https://w3id.org/iotf#HardwareVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#HardwareVersion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#Symptom> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance> <http://www.w3.org/2000/01/rdf-schema#comment> "A high variance failure appears when a device’s state fluctuates back and forth more rapidly than the environment dictates." .
+# https://w3id.org/iotf#HighVariance
+<https://w3id.org/iotf#HighVariance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#HighVariance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#NonFailStop> .
+<https://w3id.org/iotf#HighVariance> <http://www.w3.org/2000/01/rdf-schema#comment> "A high variance failure appears when a device’s state fluctuates back and forth more rapidly than the environment dictates." .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#LowBattery
-<http://www.semanticweb.org/orangeinnovation/IoTF#LowBattery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#LowBattery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure> .
+# https://w3id.org/iotf#LowBattery
+<https://w3id.org/iotf#LowBattery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#LowBattery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#PowerFailure> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage
-<http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#Symptom> .
+# https://w3id.org/iotf#MemoryUsage
+<https://w3id.org/iotf#MemoryUsage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#MemoryUsage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#Symptom> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#NFCFault
-<http://www.semanticweb.org/orangeinnovation/IoTF#NFCFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#NFCFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault> .
+# https://w3id.org/iotf#NFCFault
+<https://w3id.org/iotf#NFCFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#NFCFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#RadioFault> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop
-<http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop> <http://www.w3.org/2000/01/rdf-schema#comment> "failure relate to a response by the device that diverges from the desired device state." .
+# https://w3id.org/iotf#NonFailStop
+<https://w3id.org/iotf#NonFailStop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#NonFailStop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#NonFailStop> <http://www.w3.org/2000/01/rdf-schema#comment> "failure relate to a response by the device that diverges from the desired device state." .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#NonVolatileMemoryError
-<http://www.semanticweb.org/orangeinnovation/IoTF#NonVolatileMemoryError> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#NonVolatileMemoryError> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure> .
+# https://w3id.org/iotf#NonVolatileMemoryError
+<https://w3id.org/iotf#NonVolatileMemoryError> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#NonVolatileMemoryError> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#HardwareFailure> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#Omission
-<http://www.semanticweb.org/orangeinnovation/IoTF#Omission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#Omission> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure> .
+# https://w3id.org/iotf#Omission
+<https://w3id.org/iotf#Omission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#Omission> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#CommunicationFailure> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#Outlier
-<http://www.semanticweb.org/orangeinnovation/IoTF#Outlier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#Outlier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#Outlier> <http://www.w3.org/2000/01/rdf-schema#comment> "an outlier failure occurs when a device to report an incorrect state for a very brief period, usually theduration of just 1 poll." .
+# https://w3id.org/iotf#Outlier
+<https://w3id.org/iotf#Outlier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#Outlier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#NonFailStop> .
+<https://w3id.org/iotf#Outlier> <http://www.w3.org/2000/01/rdf-schema#comment> "an outlier failure occurs when a device to report an incorrect state for a very brief period, usually theduration of just 1 poll." .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure
-<http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure> <http://www.w3.org/2000/01/rdf-schema#comment> "reprensents failure cause related to power e.g, battery level." .
+# https://w3id.org/iotf#PowerFailure
+<https://w3id.org/iotf#PowerFailure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#PowerFailure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#FailureCause> .
+<https://w3id.org/iotf#PowerFailure> <http://www.w3.org/2000/01/rdf-schema#comment> "reprensents failure cause related to power e.g, battery level." .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#PowerSource
-<http://www.semanticweb.org/orangeinnovation/IoTF#PowerSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#PowerSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure> .
+# https://w3id.org/iotf#PowerSource
+<https://w3id.org/iotf#PowerSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#PowerSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#HardwareFailure> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault
-<http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure> .
+# https://w3id.org/iotf#RadioFault
+<https://w3id.org/iotf#RadioFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#RadioFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#HardwareFailure> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#RebootCount
-<http://www.semanticweb.org/orangeinnovation/IoTF#RebootCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#RebootCount> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#Symptom> .
+# https://w3id.org/iotf#RebootCount
+<https://w3id.org/iotf#RebootCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#RebootCount> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#Symptom> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction
-<http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction> <http://www.w3.org/2000/01/rdf-schema#comment> "denotes actions that allows recovering a device from a given failure." .
+# https://w3id.org/iotf#RecoveryAction
+<https://w3id.org/iotf#RecoveryAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#RecoveryAction> <http://www.w3.org/2000/01/rdf-schema#comment> "denotes actions that allows recovering a device from a given failure." .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureCause> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure> <http://www.w3.org/2000/01/rdf-schema#comment> "represents failure cause related to software." .
+# https://w3id.org/iotf#SoftwareFailure
+<https://w3id.org/iotf#SoftwareFailure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#SoftwareFailure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#FailureCause> .
+<https://w3id.org/iotf#SoftwareFailure> <http://www.w3.org/2000/01/rdf-schema#comment> "represents failure cause related to software." .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction> .
+# https://w3id.org/iotf#SoftwareRestart
+<https://w3id.org/iotf#SoftwareRestart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#SoftwareRestart> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#RecoveryAction> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#RecoveryAction> .
+# https://w3id.org/iotf#SoftwareUpdate
+<https://w3id.org/iotf#SoftwareUpdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#SoftwareUpdate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#RecoveryAction> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareVersion
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareVersion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#Symptom> .
+# https://w3id.org/iotf#SoftwareVersion
+<https://w3id.org/iotf#SoftwareVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#SoftwareVersion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#Symptom> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#Spike
-<http://www.semanticweb.org/orangeinnovation/IoTF#Spike> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#Spike> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#Spike> <http://www.w3.org/2000/01/rdf-schema#comment> "A spike fault happens when there is a rapid increase or decrease in the device state." .
+# https://w3id.org/iotf#Spike
+<https://w3id.org/iotf#Spike> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#Spike> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#NonFailStop> .
+<https://w3id.org/iotf#Spike> <http://www.w3.org/2000/01/rdf-schema#comment> "A spike fault happens when there is a rapid increase or decrease in the device state." .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt
-<http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#NonFailStop> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt> <http://www.w3.org/2000/01/rdf-schema#comment> "A stuck-at failure happens when a device cannot change state, maintaining the same state despite changes in environment or actuation commands." .
+# https://w3id.org/iotf#StuckAt
+<https://w3id.org/iotf#StuckAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#StuckAt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#NonFailStop> .
+<https://w3id.org/iotf#StuckAt> <http://www.w3.org/2000/01/rdf-schema#comment> "A stuck-at failure happens when a device cannot change state, maintaining the same state despite changes in environment or actuation commands." .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#Symptom
-<http://www.semanticweb.org/orangeinnovation/IoTF#Symptom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#Symptom> <http://www.w3.org/2002/07/owl#equivalentClass> <https://saref.etsi.org/core/Measurement> .
+# https://w3id.org/iotf#Symptom
+<https://w3id.org/iotf#Symptom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#Symptom> <http://www.w3.org/2002/07/owl#equivalentClass> <https://saref.etsi.org/core/Measurement> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#Temperature
-<http://www.semanticweb.org/orangeinnovation/IoTF#Temperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#Temperature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#Symptom> .
+# https://w3id.org/iotf#Temperature
+<https://w3id.org/iotf#Temperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#Temperature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#Symptom> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#ThreadFault
-<http://www.semanticweb.org/orangeinnovation/IoTF#ThreadFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#ThreadFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault> .
+# https://w3id.org/iotf#ThreadFault
+<https://w3id.org/iotf#ThreadFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#ThreadFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#RadioFault> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#Timing
-<http://www.semanticweb.org/orangeinnovation/IoTF#Timing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#Timing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#CommunicationFailure> .
+# https://w3id.org/iotf#Timing
+<https://w3id.org/iotf#Timing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#Timing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#CommunicationFailure> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#TotalOperationalTime
-<http://www.semanticweb.org/orangeinnovation/IoTF#TotalOperationalTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#TotalOperationalTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#Symptom> .
+# https://w3id.org/iotf#TotalOperationalTime
+<https://w3id.org/iotf#TotalOperationalTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#TotalOperationalTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#Symptom> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#UpTime
-<http://www.semanticweb.org/orangeinnovation/IoTF#UpTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#UpTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#Symptom> .
+# https://w3id.org/iotf#UpTime
+<https://w3id.org/iotf#UpTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#UpTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#Symptom> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#UserInterfaceFault
-<http://www.semanticweb.org/orangeinnovation/IoTF#UserInterfaceFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#UserInterfaceFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure> .
+# https://w3id.org/iotf#UserInterfaceFault
+<https://w3id.org/iotf#UserInterfaceFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#UserInterfaceFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#HardwareFailure> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#VisualDisplayFault
-<http://www.semanticweb.org/orangeinnovation/IoTF#VisualDisplayFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#VisualDisplayFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure> .
+# https://w3id.org/iotf#VisualDisplayFault
+<https://w3id.org/iotf#VisualDisplayFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#VisualDisplayFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#HardwareFailure> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#WIFIFault
-<http://www.semanticweb.org/orangeinnovation/IoTF#WIFIFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#WIFIFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#RadioFault> .
+# https://w3id.org/iotf#WIFIFault
+<https://w3id.org/iotf#WIFIFault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#WIFIFault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#RadioFault> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O
-<http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/orangeinnovation/IoTF#Symptom> .
+# https://w3id.org/iotf#NetworkI/O
+<https://w3id.org/iotf#NetworkI/O> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iotf#NetworkI/O> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iotf#Symptom> .
 # 
 # https://saref.etsi.org/core/ActuatingFunction
 <https://saref.etsi.org/core/ActuatingFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1435,181 +1435,181 @@ _:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#AlarmXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#AlarmXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#AlarmXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType> .
+# https://w3id.org/iotf#AlarmXM
+<https://w3id.org/iotf#AlarmXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#AlarmXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#DeviceType> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailureMotionSensorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailureMotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailureMotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailure> .
+# https://w3id.org/iotf#ConnectivityFailureMotionSensorXM
+<https://w3id.org/iotf#ConnectivityFailureMotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#ConnectivityFailureMotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#ConnectivityFailure> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityMotionSensorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityMotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityMotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityMotionSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy> <http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityFailureMotionSensorXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#ConnectivityMotionSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O> "1000"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# https://w3id.org/iotf#ConnectivityMotionSensorXM
+<https://w3id.org/iotf#ConnectivityMotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#ConnectivityMotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#ConnectivityMotionSensorXM> <https://w3id.org/iotf#isCausedBy> <https://w3id.org/iotf#ConnectivityFailureMotionSensorXM> .
+<https://w3id.org/iotf#ConnectivityMotionSensorXM> <https://w3id.org/iotf#NetworkI/O> "1000"^^<http://www.w3.org/2001/XMLSchema#integer> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#FailureSmartThingsHub
-<http://www.semanticweb.org/orangeinnovation/IoTF#FailureSmartThingsHub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#FailureSmartThingsHub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#FailureSmartThingsHub> <http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy> <http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmartThingsHub> .
+# https://w3id.org/iotf#FailureSmartThingsHub
+<https://w3id.org/iotf#FailureSmartThingsHub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#FailureSmartThingsHub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#FailureSmartThingsHub> <https://w3id.org/iotf#isCausedBy> <https://w3id.org/iotf#SoftwareFailureSmartThingsHub> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareFailureLeakDetectionXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareFailureLeakDetectionXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareFailureLeakDetectionXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure> .
+# https://w3id.org/iotf#FirmwareFailureLeakDetectionXM
+<https://w3id.org/iotf#FirmwareFailureLeakDetectionXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#FirmwareFailureLeakDetectionXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#SoftwareFailure> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLeakDetectionXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLeakDetectionXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLeakDetectionXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate> .
+# https://w3id.org/iotf#FirmwareUpdateLeakDetectionXM
+<https://w3id.org/iotf#FirmwareUpdateLeakDetectionXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#FirmwareUpdateLeakDetectionXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#FirmwareUpdate> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLightBulbXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLightBulbXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLightBulbXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdate> .
+# https://w3id.org/iotf#FirmwareUpdateLightBulbXM
+<https://w3id.org/iotf#FirmwareUpdateLightBulbXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#FirmwareUpdateLightBulbXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#FirmwareUpdate> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailureTempSensorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailureTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailureTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailure> .
+# https://w3id.org/iotf#HardwareFailureTempSensorXM
+<https://w3id.org/iotf#HardwareFailureTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#HardwareFailureTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#HardwareFailure> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartMotionSensorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartMotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartMotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart> .
+# https://w3id.org/iotf#HardwareRestartMotionSensorXM
+<https://w3id.org/iotf#HardwareRestartMotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#HardwareRestartMotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#HardwareRestart> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartSmokeSensorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart> .
+# https://w3id.org/iotf#HardwareRestartSmokeSensorXM
+<https://w3id.org/iotf#HardwareRestartSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#HardwareRestartSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#HardwareRestart> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartTempSensorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestart> .
+# https://w3id.org/iotf#HardwareRestartTempSensorXM
+<https://w3id.org/iotf#HardwareRestartTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#HardwareRestartTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#HardwareRestart> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceAlarmXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceAlarmXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceAlarmXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceAlarmXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceAlarmXM> <http://www.semanticweb.org/orangeinnovation/IoTF#happensAt> <http://www.semanticweb.org/orangeinnovation/IoTF#AlarmXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceAlarmXM> <http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction> <http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartAlarmXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceAlarmXM> <http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode> "0x3432" .
+# https://w3id.org/iotf#HighVarianceAlarmXM
+<https://w3id.org/iotf#HighVarianceAlarmXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#HighVarianceAlarmXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#HighVarianceAlarmXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#HighVariance> .
+<https://w3id.org/iotf#HighVarianceAlarmXM> <https://w3id.org/iotf#happensAt> <https://w3id.org/iotf#AlarmXM> .
+<https://w3id.org/iotf#HighVarianceAlarmXM> <https://w3id.org/iotf#hasRecoveryAction> <https://w3id.org/iotf#SoftwareRestartAlarmXM> .
+<https://w3id.org/iotf#HighVarianceAlarmXM> <https://w3id.org/iotf#hasFailureCode> "0x3432" .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#happensAt> <http://www.semanticweb.org/orangeinnovation/IoTF#LeakDetectorMX> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction> <http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLeakDetectionXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy> <http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareFailureLeakDetectionXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode> "0x8564000" .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLeakDetectorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#NetworkI/O> "1000"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# https://w3id.org/iotf#HighVarianceLeakDetectorXM
+<https://w3id.org/iotf#HighVarianceLeakDetectorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#HighVarianceLeakDetectorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#HighVarianceLeakDetectorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#HighVariance> .
+<https://w3id.org/iotf#HighVarianceLeakDetectorXM> <https://w3id.org/iotf#happensAt> <https://w3id.org/iotf#LeakDetectorMX> .
+<https://w3id.org/iotf#HighVarianceLeakDetectorXM> <https://w3id.org/iotf#hasRecoveryAction> <https://w3id.org/iotf#FirmwareUpdateLeakDetectionXM> .
+<https://w3id.org/iotf#HighVarianceLeakDetectorXM> <https://w3id.org/iotf#isCausedBy> <https://w3id.org/iotf#FirmwareFailureLeakDetectionXM> .
+<https://w3id.org/iotf#HighVarianceLeakDetectorXM> <https://w3id.org/iotf#hasFailureCode> "0x8564000" .
+<https://w3id.org/iotf#HighVarianceLeakDetectorXM> <https://w3id.org/iotf#NetworkI/O> "1000"^^<http://www.w3.org/2001/XMLSchema#integer> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLighBulbXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLighBulbXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLighBulbXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLighBulbXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLighBulbXM> <http://www.semanticweb.org/orangeinnovation/IoTF#happensAt> <http://www.semanticweb.org/orangeinnovation/IoTF#LightBulbXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLighBulbXM> <http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction> <http://www.semanticweb.org/orangeinnovation/IoTF#FirmwareUpdateLightBulbXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceLighBulbXM> <http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode> "0x23442" .
+# https://w3id.org/iotf#HighVarianceLighBulbXM
+<https://w3id.org/iotf#HighVarianceLighBulbXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#HighVarianceLighBulbXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#HighVarianceLighBulbXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#HighVariance> .
+<https://w3id.org/iotf#HighVarianceLighBulbXM> <https://w3id.org/iotf#happensAt> <https://w3id.org/iotf#LightBulbXM> .
+<https://w3id.org/iotf#HighVarianceLighBulbXM> <https://w3id.org/iotf#hasRecoveryAction> <https://w3id.org/iotf#FirmwareUpdateLightBulbXM> .
+<https://w3id.org/iotf#HighVarianceLighBulbXM> <https://w3id.org/iotf#hasFailureCode> "0x23442" .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#happensAt> <http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction> <http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartSmokeSensorXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy> <http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode> "0x234" .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceSmokeSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#BatteryLevel> "203"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# https://w3id.org/iotf#HighVarianceSmokeSensorXM
+<https://w3id.org/iotf#HighVarianceSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#HighVarianceSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#HighVarianceSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#HighVariance> .
+<https://w3id.org/iotf#HighVarianceSmokeSensorXM> <https://w3id.org/iotf#happensAt> <https://w3id.org/iotf#SmokeSensorXM> .
+<https://w3id.org/iotf#HighVarianceSmokeSensorXM> <https://w3id.org/iotf#hasRecoveryAction> <https://w3id.org/iotf#HardwareRestartSmokeSensorXM> .
+<https://w3id.org/iotf#HighVarianceSmokeSensorXM> <https://w3id.org/iotf#isCausedBy> <https://w3id.org/iotf#HighVarianceSmokeSensorXM> .
+<https://w3id.org/iotf#HighVarianceSmokeSensorXM> <https://w3id.org/iotf#hasFailureCode> "0x234" .
+<https://w3id.org/iotf#HighVarianceSmokeSensorXM> <https://w3id.org/iotf#BatteryLevel> "203"^^<http://www.w3.org/2001/XMLSchema#integer> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#HighVariance> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#happensAt> <http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction> <http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy> <http://www.semanticweb.org/orangeinnovation/IoTF#HardwareFailureTempSensorXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode> "0x801" .
-<http://www.semanticweb.org/orangeinnovation/IoTF#HighVarianceTempSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#CPUUsage> "1000"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# https://w3id.org/iotf#HighVarianceTempSensorXM
+<https://w3id.org/iotf#HighVarianceTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#HighVarianceTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#HighVarianceTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#HighVariance> .
+<https://w3id.org/iotf#HighVarianceTempSensorXM> <https://w3id.org/iotf#happensAt> <https://w3id.org/iotf#TempSensorXM> .
+<https://w3id.org/iotf#HighVarianceTempSensorXM> <https://w3id.org/iotf#hasRecoveryAction> <https://w3id.org/iotf#HighVarianceTempSensorXM> .
+<https://w3id.org/iotf#HighVarianceTempSensorXM> <https://w3id.org/iotf#isCausedBy> <https://w3id.org/iotf#HardwareFailureTempSensorXM> .
+<https://w3id.org/iotf#HighVarianceTempSensorXM> <https://w3id.org/iotf#hasFailureCode> "0x801" .
+<https://w3id.org/iotf#HighVarianceTempSensorXM> <https://w3id.org/iotf#CPUUsage> "1000"^^<http://www.w3.org/2001/XMLSchema#integer> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#LeakDetectorMX
-<http://www.semanticweb.org/orangeinnovation/IoTF#LeakDetectorMX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#LeakDetectorMX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType> .
+# https://w3id.org/iotf#LeakDetectorMX
+<https://w3id.org/iotf#LeakDetectorMX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#LeakDetectorMX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#DeviceType> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#LightBulbXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#LightBulbXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#LightBulbXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType> .
+# https://w3id.org/iotf#LightBulbXM
+<https://w3id.org/iotf#LightBulbXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#LightBulbXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#DeviceType> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#MotionSensorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#MotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#MotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType> .
+# https://w3id.org/iotf#MotionSensorXM
+<https://w3id.org/iotf#MotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#MotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#DeviceType> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailureMotionSensorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailureMotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailureMotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailure> .
+# https://w3id.org/iotf#PowerFailureMotionSensorXM
+<https://w3id.org/iotf#PowerFailureMotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#PowerFailureMotionSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#PowerFailure> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#SmartThingsHub
-<http://www.semanticweb.org/orangeinnovation/IoTF#SmartThingsHub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SmartThingsHub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType> .
+# https://w3id.org/iotf#SmartThingsHub
+<https://w3id.org/iotf#SmartThingsHub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#SmartThingsHub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#DeviceType> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType> .
+# https://w3id.org/iotf#SmokeSensorXM
+<https://w3id.org/iotf#SmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#SmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#DeviceType> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmartThingsHub
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmartThingsHub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmartThingsHub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure> .
+# https://w3id.org/iotf#SoftwareFailureSmartThingsHub
+<https://w3id.org/iotf#SoftwareFailureSmartThingsHub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#SoftwareFailureSmartThingsHub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#SoftwareFailure> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmokeSensorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure> .
+# https://w3id.org/iotf#SoftwareFailureSmokeSensorXM
+<https://w3id.org/iotf#SoftwareFailureSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#SoftwareFailureSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#SoftwareFailure> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureTempSensorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailure> .
+# https://w3id.org/iotf#SoftwareFailureTempSensorXM
+<https://w3id.org/iotf#SoftwareFailureTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#SoftwareFailureTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#SoftwareFailure> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartAlarmXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartAlarmXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartAlarmXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart> .
+# https://w3id.org/iotf#SoftwareRestartAlarmXM
+<https://w3id.org/iotf#SoftwareRestartAlarmXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#SoftwareRestartAlarmXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#SoftwareRestart> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartSmokeSensorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestart> .
+# https://w3id.org/iotf#SoftwareRestartSmokeSensorXM
+<https://w3id.org/iotf#SoftwareRestartSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#SoftwareRestartSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#SoftwareRestart> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateSmartThingsHub
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateSmartThingsHub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateSmartThingsHub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate> .
+# https://w3id.org/iotf#SoftwareUpdateSmartThingsHub
+<https://w3id.org/iotf#SoftwareUpdateSmartThingsHub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#SoftwareUpdateSmartThingsHub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#SoftwareUpdate> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateTempSensorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdate> .
+# https://w3id.org/iotf#SoftwareUpdateTempSensorXM
+<https://w3id.org/iotf#SoftwareUpdateTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#SoftwareUpdateTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#SoftwareUpdate> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#Spike> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#happensAt> <http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction> <http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareUpdateTempSensorXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy> <http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureTempSensorXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#SpikeTempSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode> "0x80000000" .
+# https://w3id.org/iotf#SpikeTempSensorXM
+<https://w3id.org/iotf#SpikeTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#SpikeTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#SpikeTempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#Spike> .
+<https://w3id.org/iotf#SpikeTempSensorXM> <https://w3id.org/iotf#happensAt> <https://w3id.org/iotf#TempSensorXM> .
+<https://w3id.org/iotf#SpikeTempSensorXM> <https://w3id.org/iotf#hasRecoveryAction> <https://w3id.org/iotf#SoftwareUpdateTempSensorXM> .
+<https://w3id.org/iotf#SpikeTempSensorXM> <https://w3id.org/iotf#isCausedBy> <https://w3id.org/iotf#SoftwareFailureTempSensorXM> .
+<https://w3id.org/iotf#SpikeTempSensorXM> <https://w3id.org/iotf#hasFailureCode> "0x80000000" .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtMotionSensor
-<http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtMotionSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtMotionSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtMotionSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtMotionSensor> <http://www.semanticweb.org/orangeinnovation/IoTF#happensAt> <http://www.semanticweb.org/orangeinnovation/IoTF#MotionSensorXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtMotionSensor> <http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction> <http://www.semanticweb.org/orangeinnovation/IoTF#HardwareRestartMotionSensorXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtMotionSensor> <http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy> <http://www.semanticweb.org/orangeinnovation/IoTF#PowerFailureMotionSensorXM> .
+# https://w3id.org/iotf#StuckAtMotionSensor
+<https://w3id.org/iotf#StuckAtMotionSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#StuckAtMotionSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#StuckAtMotionSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#StuckAt> .
+<https://w3id.org/iotf#StuckAtMotionSensor> <https://w3id.org/iotf#happensAt> <https://w3id.org/iotf#MotionSensorXM> .
+<https://w3id.org/iotf#StuckAtMotionSensor> <https://w3id.org/iotf#hasRecoveryAction> <https://w3id.org/iotf#HardwareRestartMotionSensorXM> .
+<https://w3id.org/iotf#StuckAtMotionSensor> <https://w3id.org/iotf#isCausedBy> <https://w3id.org/iotf#PowerFailureMotionSensorXM> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#FailureMode> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#StuckAt> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#happensAt> <http://www.semanticweb.org/orangeinnovation/IoTF#SmokeSensorXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#hasRecoveryAction> <http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareRestartSmokeSensorXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#isCausedBy> <http://www.semanticweb.org/orangeinnovation/IoTF#SoftwareFailureSmokeSensorXM> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#hasFailureCode> "0x345" .
-<http://www.semanticweb.org/orangeinnovation/IoTF#StuckAtSmokeSensorXM> <http://www.semanticweb.org/orangeinnovation/IoTF#MemoryUsage> "1005"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# https://w3id.org/iotf#StuckAtSmokeSensorXM
+<https://w3id.org/iotf#StuckAtSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#StuckAtSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#FailureMode> .
+<https://w3id.org/iotf#StuckAtSmokeSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#StuckAt> .
+<https://w3id.org/iotf#StuckAtSmokeSensorXM> <https://w3id.org/iotf#happensAt> <https://w3id.org/iotf#SmokeSensorXM> .
+<https://w3id.org/iotf#StuckAtSmokeSensorXM> <https://w3id.org/iotf#hasRecoveryAction> <https://w3id.org/iotf#SoftwareRestartSmokeSensorXM> .
+<https://w3id.org/iotf#StuckAtSmokeSensorXM> <https://w3id.org/iotf#isCausedBy> <https://w3id.org/iotf#SoftwareFailureSmokeSensorXM> .
+<https://w3id.org/iotf#StuckAtSmokeSensorXM> <https://w3id.org/iotf#hasFailureCode> "0x345" .
+<https://w3id.org/iotf#StuckAtSmokeSensorXM> <https://w3id.org/iotf#MemoryUsage> "1005"^^<http://www.w3.org/2001/XMLSchema#integer> .
 # 
-# http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM
-<http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/orangeinnovation/IoTF#TempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/orangeinnovation/IoTF#DeviceType> .
+# https://w3id.org/iotf#TempSensorXM
+<https://w3id.org/iotf#TempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/iotf#TempSensorXM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iotf#DeviceType> .
 # 
 # https://saref.etsi.org/core/Cleaning
 <https://saref.etsi.org/core/Cleaning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
